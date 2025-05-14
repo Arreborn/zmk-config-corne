@@ -13,14 +13,14 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <0>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <175>;
+            quick-tap-ms = <150>;
             global-quick-tap;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <75>;
             hold-trigger-on-release;
         };
 
@@ -144,6 +144,46 @@
         sym_2 {
             bindings = <&kp AT_SIGN>;
             key-positions = <2 14>;
+        };
+
+        sym_3 {
+            bindings = <&kp HASH>;
+            key-positions = <3 15>;
+        };
+
+        sym_4 {
+            bindings = <&kp DOLLAR>;
+            key-positions = <4 16>;
+        };
+
+        sym_5 {
+            bindings = <&kp PERCENT>;
+            key-positions = <5 17>;
+        };
+
+        sym_6 {
+            bindings = <&kp CARET>;
+            key-positions = <6 18>;
+        };
+
+        sym_7 {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <7 19>;
+        };
+
+        sym_8 {
+            bindings = <&kp ASTERISK>;
+            key-positions = <8 20>;
+        };
+
+        sym_9 {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <9 21>;
+        };
+
+        sym_10 {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <10 22>;
         };
     };
 
