@@ -20,7 +20,7 @@
 
             quick-tap-ms = <175>;
             global-quick-tap;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <100>;
             hold-trigger-on-release;
         };
 
@@ -135,6 +135,16 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <30 31>;
         };
+
+        sym_1 {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <13 1>;
+        };
+
+        sym_2 {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <2 14>;
+        };
     };
 
     //
@@ -171,7 +181,7 @@
             bindings = <
 &trans   &trans    &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT     &kp PERIOD    &kp N7        &kp N8           &kp N9        &kp UP_ARROW    &trans     &trans
 &trans   &kp LEFT  &kp EXCLAMATION  &kp EQUAL         &kp PLUS        &kp MINUS     &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp N0          &kp RIGHT  &trans
-&kp ESC  &trans    &kp PIPE         &kp LESS_THAN     &kp ASTERISK    &kp SLASH     &kp NUMBER_1  &kp NUMBER_2     &kp N2        &kp DOWN_ARROW  &trans     &trans
+&kp ESC  &trans    &kp PIPE         &kp LESS_THAN     &kp ASTERISK    &kp SLASH     &kp NUMBER_1  &kp NUMBER_2     &kp N3        &kp DOWN_ARROW  &trans     &trans
                                     &kp LGUI          &kp LEFT_SHIFT  &shift_del    &shift_space  &kp RIGHT_SHIFT  &kp N0
             >;
         };
