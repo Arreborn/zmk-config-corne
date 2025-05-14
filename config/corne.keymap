@@ -132,7 +132,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB           &kp B  &kp L  &kp D     &kp W           &kp Z        &kp SQT        &kp F      &kp O      &kp O       &kp J          &kp SLASH
+&kp TAB           &kp B  &kp L  &kp D     &kp W           &kp Z        &kp SQT        &kp F      &kp O      &kp U       &kp J          &kp SLASH
 &mo 1             &kp N  &kp R  &kp T     &kp S           &kp G        &kp Y          &kp H      &kp A      &kp E       &kp I          &mo 2
 &hm LCTRL ESCAPE  &kp Q  &kp X  &kp M     &kp C           &kp V        &kp K          &kp P      &kp COMMA  &kp PERIOD  &kp SEMICOLON  &hm RIGHT_ALT MINUS
                                 &kp LGUI  &kp LEFT_SHIFT  &kp SPACE    &kp BACKSPACE  &kp ENTER  &mo 3
@@ -176,10 +176,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&studio_unlock  &trans     &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP             &kp PAGE_UP    &trans    &trans          &trans        &trans     &trans
-&bootloader     &trans     &kp LS(LG(LEFT))  &kp LS(LG(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE                  &kp HOME       &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp END
-&kp ESCAPE      &kp LG(Z)  &kp LG(X)         &kp LG(C)          &kp LG(V)          &kp C_VOLUME_DOWN           &kp PAGE_DOWN  &trans    &trans          &trans        &trans     &trans
-                                             &trans             &trans             &kp LG(LS(C_PLAY_PAUSE))    &kp LG(SPACE)  &trans    &trans
+&studio_unlock  &trans     &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP      &kp PAGE_UP    &trans    &trans          &trans        &trans     &trans
+&bootloader     &trans     &kp LS(LG(LEFT))  &kp LS(LG(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp HOME       &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp END
+&kp ESCAPE      &kp LG(Z)  &kp LG(X)         &kp LG(C)          &kp LG(V)          &kp C_VOLUME_DOWN    &kp PAGE_DOWN  &trans    &trans          &trans        &trans     &trans
+                                             &trans             &trans             &kp LG(LS(SPACE))    &kp LG(SPACE)  &trans    &trans
             >;
         };
     };
