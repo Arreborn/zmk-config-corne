@@ -264,10 +264,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB           &kp B  &kp L  &kp D         &kp W                          &kp Z             &kp SQT                &kp F                            &kp O          &kp U     &kp J      &kp RA(U)
-&adv_lt 1 ESCAPE  &kp N  &kp R  &kp T         &kp S                          &kp G             &kp Y                  &kp H                            &kp A          &kp E     &kp I      &adv_lt 2 SLASH
-&kp LCTRL         &kp Q  &kp X  &kp M         &kp C                          &kp V             &kp K                  &kp P                            &mod_com       &mod_per  &kp MINUS  &kp RIGHT_ALT
-                                &lt 3 ESCAPE  &shift_hold_left LEFT_SHIFT 0  &kp LEFT_SHIFT    &mt RIGHT_SHIFT ENTER  &shift_hold_right RIGHT_SHIFT 0  &kp RIGHT_GUI
+&kp TAB           &kp B  &kp L  &kp D         &kp W       &kp Z                    &kp SQT                &kp F       &kp O          &kp U     &kp J      &kp RA(U)
+&adv_lt 1 ESCAPE  &kp N  &kp R  &kp T         &kp S       &kp G                    &kp Y                  &kp H       &kp A          &kp E     &kp I      &adv_lt 2 SLASH
+&kp LCTRL         &kp Q  &kp X  &kp M         &kp C       &kp V                    &kp K                  &kp P       &mod_per       &mod_com  &kp MINUS  &kp RIGHT_ALT
+                                &lt 3 ESCAPE  &shift_del  &mt LEFT_SHIFT ESCAPE    &mt RIGHT_SHIFT ENTER  &shift_tab  &kp RIGHT_GUI
             >;
         };
 
@@ -281,10 +281,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans            &trans    &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT                    &kp PERIOD    &kp UP_ARROW    &kp N7                           &kp N8        &kp N9        &trans        &trans
-&trans            &kp LEFT  &kp EXCLAMATION  &kp EQUAL         &kp PLUS                       &kp MINUS     &kp UP_ARROW    &kp NUMBER_4                     &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &mo 4
-&kp LEFT_CONTROL  &trans    &kp PIPE         &kp LESS_THAN     &kp ASTERISK                   &kp SLASH     &kp DOWN_ARROW  &kp NUMBER_1                     &kp NUMBER_2  &kp NUMBER_3  &trans        &kp RIGHT_ALT
-                                             &kp LGUI          &shift_hold_left LEFT_SHIFT 0  &shift_del    &kp ENTER       &shift_hold_right RIGHT_SHIFT 0  &kp N0
+&trans            &trans    &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp PERIOD               &kp UP_ARROW           &kp N7        &kp N8        &kp N9        &trans        &trans
+&trans            &kp LEFT  &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS                &kp UP_ARROW           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &mo 4
+&kp LEFT_CONTROL  &trans    &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH                &kp DOWN_ARROW         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &kp RIGHT_ALT
+                                             &kp LGUI          &shift_del    &mt LEFT_SHIFT ESCAPE    &mt RIGHT_SHIFT ENTER  &shift_tab    &kp N0
             >;
         };
 
@@ -298,10 +298,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans            &kp EXCL  &kp AT          &kp HASH        &kp DLLR                       &kp PRCNT    &kp CARET  &kp AMPS                         &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR  &kp QUESTION
-&mo 4             &trans    &trans          &kp UP_ARROW    &trans                         &kp GRAVE    &kp MINUS  &kp EQUAL                        &kp LBKT       &kp RBKT              &kp BSLH  &trans
-&kp LEFT_CONTROL  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW                &kp TILDE    &kp UNDER  &kp PLUS                         &kp LBRC       &kp RBRC              &kp PIPE  &kp RIGHT_ALT
-                                            &kp LGUI        &shift_hold_left LEFT_SHIFT 0  &kp DEL      &kp ENTER  &shift_hold_right RIGHT_SHIFT 0  &kp RIGHT_GUI
+&trans            &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT                &kp CARET              &kp AMPS    &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR  &kp QUESTION
+&mo 4             &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE                &kp MINUS              &kp EQUAL   &kp LBKT       &kp RBKT              &kp BSLH  &trans
+&kp LEFT_CONTROL  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE                &kp UNDER              &kp PLUS    &kp LBRC       &kp RBRC              &kp PIPE  &kp RIGHT_ALT
+                                            &kp LGUI        &shift_del       &mt LEFT_SHIFT ESCAPE    &mt RIGHT_SHIFT ENTER  &shift_tab  &kp RIGHT_GUI
             >;
         };
 
