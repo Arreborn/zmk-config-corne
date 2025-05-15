@@ -250,10 +250,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans   &trans    &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT     &kp PERIOD    &kp N7        &kp N8           &kp N9        &kp UP_ARROW    &trans     &trans
-&trans   &kp LEFT  &kp EXCLAMATION  &kp EQUAL         &kp PLUS        &kp MINUS     &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp N0          &kp RIGHT  &mo 4
-&kp ESC  &trans    &kp PIPE         &kp LESS_THAN     &kp ASTERISK    &kp SLASH     &kp NUMBER_1  &kp NUMBER_2     &kp N3        &kp DOWN_ARROW  &trans     &trans
-                                    &kp LGUI          &kp LEFT_SHIFT  &shift_del    &shift_tab    &kp RIGHT_SHIFT  &kp N0
+&trans            &trans    &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT     &kp PERIOD    &kp N7        &kp N8           &kp N9        &kp UP_ARROW    &trans     &trans
+&trans            &kp LEFT  &kp EXCLAMATION  &kp EQUAL         &kp PLUS        &kp MINUS     &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp N0          &kp RIGHT  &mo 4
+&kp LEFT_CONTROL  &trans    &kp PIPE         &kp LESS_THAN     &kp ASTERISK    &kp SLASH     &kp NUMBER_1  &kp NUMBER_2     &kp N3        &kp DOWN_ARROW  &trans     &kp RIGHT_ALT
+                                             &kp LGUI          &kp LEFT_SHIFT  &shift_del    &shift_tab    &kp RIGHT_SHIFT  &kp N0
             >;
         };
 
@@ -267,20 +267,20 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR  &kp QUESTION
-&mo 4   &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT       &kp RBKT              &kp BSLH  &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC       &kp RBRC              &kp PIPE  &trans
-                                  &kp LGUI        &trans           &kp DEL      &kp SPACE  &kp ENTER  &kp RIGHT_GUI
+&trans            &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR  &kp QUESTION
+&mo 4             &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT       &kp RBKT              &kp BSLH  &trans
+&kp LEFT_CONTROL  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC       &kp RBRC              &kp PIPE  &kp RIGHT_ALT
+                                            &kp LGUI        &kp LEFT_SHIFT   &kp DEL      &kp SPACE  &kp ENTER  &kp RIGHT_GUI
             >;
         };
 
         NAV {
             display-name = "Nav";
             bindings = <
-&browsertab  &trans     &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP      &kp PAGE_UP    &kp HOME  &kp PG_DN       &kp PG_UP     &kp END    &trans
-&trans       &trans     &kp LS(LG(LEFT))  &kp LS(LG(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp HOME       &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
-&kp ESCAPE   &kp LG(Z)  &kp LG(X)         &kp LG(C)          &kp LG(V)          &kp C_VOLUME_DOWN    &kp PAGE_DOWN  &trans    &trans          &trans        &trans     &trans
-                                          &trans             &trans             &kp LG(SPACE)        &kp LG(SPACE)  &trans    &trans
+&browsertab       &kp C_BRI_INC  &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP      &kp K_NEXT        &kp HOME         &kp PG_DN       &kp PG_UP     &kp END    &trans
+&kp ESCAPE        &kp C_BRI_DEC  &kp LS(LG(LEFT))  &kp LS(LG(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp K_PLAY_PAUSE  &kp LEFT         &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&kp LEFT_CONTROL  &kp LG(Z)      &kp LG(X)         &kp LG(C)          &kp LG(V)          &kp C_VOLUME_DOWN    &kp K_PREV        &trans           &trans          &trans        &trans     &kp RIGHT_ALT
+                                                   &trans             &kp LEFT_SHIFT     &kp LG(SPACE)        &kp LG(SPACE)     &kp RIGHT_SHIFT  &trans
             >;
         };
 
