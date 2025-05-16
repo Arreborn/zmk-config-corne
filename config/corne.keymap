@@ -262,7 +262,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB       &kp V  &kp L  &kp H  &kp G       &kp Z               &kp Q            &kp F       &kp O          &kp U     &kp J      &kp RA(A)
+&kp TAB       &kp V  &kp L  &kp H  &kp G       &kp K               &kp Q            &kp F       &kp O          &kp U     &kp J      &kp RA(A)
 &super_shift  &kp S  &kp R  &kp N  &kp T       &kp B               &kp Y            &kp C       &kp A          &kp E     &kp I      &mt RIGHT_SHIFT SLASH
 &kp LCTRL     &kp Z  &kp X  &kp M  &kp D       &kp P               &kp SQT          &kp W       &mod_com       &mod_per  &kp MINUS  &kp RIGHT_ALT
                             &mo 3  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &kp RIGHT_GUI
