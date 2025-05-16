@@ -161,34 +161,18 @@
 
         Moosewings_L {
             bindings = <&brace>;
-            key-positions = <16 17>;
-            timeout-ms = <50>;
-        };
-
-        Moosewings_R {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <18 19>;
+            key-positions = <16 19>;
             timeout-ms = <50>;
         };
 
         Para_L {
             bindings = <&para>;
-            key-positions = <4 5>;
-        };
-
-        Para_R {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <6 7>;
+            key-positions = <15 20>;
         };
 
         Bracket_R {
             bindings = <&bracket>;
-            key-positions = <28 29>;
-        };
-
-        Bracket_L {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <30 31>;
+            key-positions = <14 21>;
         };
 
         sym_1 {
