@@ -307,7 +307,7 @@
             display-name = "Nav";
             bindings = <
 &browsertab       &kp C_BRI_INC  &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP      &kp C_PREV        &kp HOME  &kp UP_ARROW    &kp END    &kp PG_UP  &kp LS(LG(NUMBER_4))
-&caps_word        &kp C_BRI_DEC  &kp LS(LG(LEFT))  &kp LS(LG(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp C_PLAY_PAUSE  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp PG_DN  &kp RIGHT_SHIFT
+&super_shift      &kp C_BRI_DEC  &kp LS(LG(LEFT))  &kp LS(LG(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp C_PLAY_PAUSE  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp PG_DN  &kp RIGHT_SHIFT
 &kp LEFT_CONTROL  &kp LG(Z)      &kp LG(X)         &kp LG(C)          &kp LG(V)          &kp C_VOLUME_DOWN    &kp C_NEXT        &trans    &trans          &trans     &trans     &kp RIGHT_ALT
                                                    &trans             &kp LEFT_SHIFT     &kp LG(SPACE)        &kp LG(SPACE)     &kp TAB   &kp PAGE_UP
             >;
