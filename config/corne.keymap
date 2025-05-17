@@ -246,9 +246,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB       &kp V  &kp M  &kp L  &kp C       &kp P               &kp X            &kp F       &kp O          &kp U     &kp J      &kp RA(A)
-&super_shift  &kp S  &kp T  &kp R  &kp D       &kp Y               &kp SQT          &kp N       &kp A          &kp E     &kp I      &mt RIGHT_SHIFT SLASH
-&kp LCTRL     &kp Z  &kp K  &kp Q  &kp G       &kp W               &kp B            &kp H       &mod_com       &mod_per  &kp MINUS  &kp RIGHT_ALT
+&kp TAB       &kp W  &kp L  &kp Y  &kp P       &kp B               &kp Q            &kp F       &kp O          &kp U     &kp SQT    &kp RA(A)
+&super_shift  &kp C  &kp R  &kp S  &kp T       &kp G               &kp M            &kp N       &kp E          &kp I     &kp A      &mt RIGHT_SHIFT SLASH
+&kp LCTRL     &kp Z  &kp J  &kp V  &kp D       &kp K               &kp X            &kp H       &mod_com       &mod_per  &kp MINUS  &kp RIGHT_ALT
                             &mo 3  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &kp RIGHT_GUI
             >;
         };
