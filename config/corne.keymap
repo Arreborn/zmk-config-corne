@@ -212,12 +212,12 @@
 
         sym_8 {
             bindings = <&kp RA(U)>;
-            key-positions = <8 20>;
+            key-positions = <21 9>;
         };
 
         sym_9 {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <9 21>;
+            key-positions = <20 8>;
         };
 
         sym_10 {
@@ -246,8 +246,8 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB       &kp B  &kp L  &kp P  &kp C       &kp Z               &kp SQT          &kp F       &kp O          &kp U     &kp J      &kp RA(A)
-&super_shift  &kp S  &kp T  &kp R  &kp D       &kp G               &kp Y            &kp N       &kp A          &kp E     &kp I      &mt RIGHT_SHIFT SLASH
+&kp TAB       &kp B  &kp L  &kp P  &kp C       &kp Z               &kp SQT          &kp F       &kp U          &kp O     &kp J      &kp RA(A)
+&super_shift  &kp S  &kp R  &kp T  &kp D       &kp G               &kp Y            &kp N       &kp E          &kp A     &kp I      &mt RIGHT_SHIFT SLASH
 &kp LCTRL     &kp Q  &kp X  &kp M  &kp W       &kp V               &kp K            &kp H       &mod_com       &mod_per  &kp MINUS  &kp RIGHT_ALT
                             &mo 3  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &kp RIGHT_GUI
             >;
