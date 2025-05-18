@@ -246,8 +246,8 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB       &kp B  &kp L  &kp M  &kp P       &kp Z               &kp SQT          &kp F       &kp O          &kp U     &kp J      &kp RA(A)
-&super_shift  &kp S  &kp R  &kp T  &kp D       &kp G               &kp Y            &kp N       &kp A          &kp E     &kp I      &mt RIGHT_SHIFT SLASH
+&kp TAB       &kp B  &kp L  &kp M  &kp P       &kp Z               &kp SQT          &kp F       &kp U          &kp O     &kp J      &kp RA(A)
+&super_shift  &kp S  &kp R  &kp T  &kp D       &kp G               &kp Y            &kp N       &kp E          &kp A     &kp I      &mt RIGHT_SHIFT SLASH
 &kp LCTRL     &kp Q  &kp X  &kp W  &kp C       &kp V               &kp K            &kp H       &mod_com       &mod_per  &kp MINUS  &kp RIGHT_ALT
                             &mo 3  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &kp RIGHT_GUI
             >;
@@ -263,10 +263,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans            &trans    &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp PERIOD    &kp UP_ARROW     &kp N7        &kp N8         &kp N9        &trans        &trans
-&mo 3             &kp LEFT  &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS     &kp BACKSPACE    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_0  &mo 4
-&kp LEFT_CONTROL  &trans    &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH     &kp DOWN_ARROW   &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &trans        &kp RIGHT_ALT
-                                             &mo 3             &shift_del    &trans        &adv_lt 4 ENTER  &shift_tab    &kp RIGHT_GUI
+&trans            &kp LEFT_ARROW  &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp PERIOD    &kp UP_ARROW     &kp N7        &kp N8         &kp N9        &kp RIGHT_ARROW  &trans
+&mo 3             &trans          &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS     &kp BACKSPACE    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_0     &mo 4
+&kp LEFT_CONTROL  &trans          &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH     &kp DOWN_ARROW   &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &trans           &kp RIGHT_ALT
+                                                   &mo 3             &shift_del    &trans        &adv_lt 4 ENTER  &shift_tab    &kp RIGHT_GUI
             >;
         };
 
