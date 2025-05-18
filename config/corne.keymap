@@ -246,9 +246,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB       &kp B  &kp L  &kp P  &kp C       &kp Z               &kp SQT          &kp F       &kp U          &kp O     &kp J      &kp RA(A)
+&kp TAB       &kp B  &kp P  &kp L  &kp C       &kp Z               &kp SQT          &kp F       &kp U          &kp O     &kp J      &kp RA(A)
 &super_shift  &kp S  &kp R  &kp T  &kp D       &kp G               &kp Y            &kp N       &kp E          &kp A     &kp I      &mt RIGHT_SHIFT SLASH
-&kp LCTRL     &kp Q  &kp X  &kp M  &kp W       &kp V               &kp K            &kp H       &mod_com       &mod_per  &kp MINUS  &kp RIGHT_ALT
+&kp LCTRL     &kp Q  &kp X  &kp W  &kp M       &kp V               &kp K            &kp H       &mod_com       &mod_per  &kp MINUS  &kp RIGHT_ALT
                             &mo 3  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &kp RIGHT_GUI
             >;
         };
@@ -293,7 +293,7 @@
 &browsertab       &kp C_BRI_INC  &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP      &kp C_PREV        &kp HOME  &kp UP_ARROW    &kp END    &kp PG_UP  &kp LS(LG(NUMBER_4))
 &super_shift      &kp C_BRI_DEC  &kp LS(LG(LEFT))  &kp LS(LG(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp C_PLAY_PAUSE  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp PG_DN  &kp RIGHT_SHIFT
 &kp LEFT_CONTROL  &kp LG(Z)      &kp LG(X)         &kp LG(C)          &kp LG(V)          &kp C_VOLUME_DOWN    &kp C_NEXT        &trans    &trans          &trans     &trans     &kp RIGHT_ALT
-                                                   &trans             &kp LEFT_SHIFT     &kp LG(SPACE)        &kp LG(SPACE)     &kp TAB   &kp PAGE_UP
+                                                   &trans             &kp LEFT_SHIFT     &kp LG(SPACE)        &kp LG(SPACE)     &kp TAB   &kp PG_UP
             >;
         };
 
