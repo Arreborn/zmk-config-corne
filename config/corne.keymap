@@ -11,7 +11,7 @@
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            // label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick_tap_ms = <0>;
@@ -44,21 +44,21 @@
 
         para: para {
             compatible = "zmk,behavior-tap-dance";
-            label = "PARA";
+            // label = "PARA";
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
         };
 
         caps: caps {
             compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
+            // label = "CAPS";
             #binding-cells = <0>;
             continue-list = <MINUS BACKSPACE>;
         };
 
         paraless: paraless {
             compatible = "zmk,behavior-mod-morph";
-            label = "PARALESS";
+            // label = "PARALESS";
             bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
 
             #binding-cells = <0>;
@@ -67,7 +67,7 @@
 
         paragreat: paragreat {
             compatible = "zmk,behavior-mod-morph";
-            label = "PARAGREAT";
+            // label = "PARAGREAT";
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
 
             #binding-cells = <0>;
@@ -76,21 +76,21 @@
 
         brace: brace {
             compatible = "zmk,behavior-tap-dance";
-            label = "BRACE";
+            // label = "BRACE";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
         };
 
         bracket: bracket {
             compatible = "zmk,behavior-tap-dance";
-            label = "BRACKET";
+            // label = "BRACKET";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
         };
 
         shift_tab: shift_tab {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_TAB";
+            // label = "SHIFT_TAB";
             bindings = <&kp SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
@@ -99,7 +99,7 @@
 
         shift_del: shift_del {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_DEL";
+            // label = "SHIFT_DEL";
             bindings = <&kp BACKSPACE>, <&kp DEL>;
 
             #binding-cells = <0>;
@@ -108,7 +108,7 @@
 
         adv_lt: adv_lt {
             compatible = "zmk,behavior-hold-tap";
-            label = "ADV_LT";
+            // label = "ADV_LT";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
@@ -121,7 +121,7 @@
 
         mod_com: mod_com {
             compatible = "zmk,behavior-mod-morph";
-            label = "MOD_COM";
+            // label = "MOD_COM";
             bindings = <&kp COMMA>, <&kp SEMICOLON>;
 
             #binding-cells = <0>;
@@ -130,7 +130,7 @@
 
         mod_per: mod_per {
             compatible = "zmk,behavior-mod-morph";
-            label = "MOD_PER";
+            // label = "MOD_PER";
             bindings = <&ak_per>, <&kp COLON>;
 
             #binding-cells = <0>;
@@ -139,7 +139,7 @@
 
         mod_hold_tap: mod_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "MOD_HOLD_TAP";
+            // label = "MOD_HOLD_TAP";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick_tap_ms = <0>;
@@ -152,7 +152,7 @@
 
         super_shift: super_shift {
             compatible = "zmk,behavior-mod-morph";
-            label = "SUPER_SHIFT";
+            // label = "SUPER_SHIFT";
             bindings = <&mod_hold_tap LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
 
             #binding-cells = <0>;
@@ -161,7 +161,7 @@
 
         adv_repeat: adv_repeat {
             compatible = "zmk,behavior-hold-tap";
-            label = "ADV_REPEAT";
+            // label = "ADV_REPEAT";
             bindings = <&mo>, <&key_repeat>;
 
             #binding-cells = <2>;
