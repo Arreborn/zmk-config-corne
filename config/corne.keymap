@@ -331,10 +331,10 @@
 
         Conf {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &studio_unlock    &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans            &trans       &trans  &trans
+&kp ESCAPE  &trans  &trans  &trans  &trans  &studio_unlock    &bootloader  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans            &trans       &trans  &trans
             >;
         };
     };
