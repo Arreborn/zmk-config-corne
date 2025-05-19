@@ -166,6 +166,38 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
+        umlaut_test: umlaut_test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_ALT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp A>;
+
+            label = "UMLAUT_TEST";
+        };
+
+        umlaut_test_2: umlaut_test_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_ALT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp O>;
+
+            label = "UMLAUT_TEST_2";
+        };
     };
 
     combos {
@@ -228,7 +260,7 @@
         };
 
         sym_9 {
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&umlaut_test_2>;
             key-positions = <8 20>;
         };
 
@@ -240,6 +272,11 @@
         qm {
             bindings = <&kp QUESTION>;
             key-positions = <22 23>;
+        };
+
+        ae {
+            bindings = <&umlaut_test>;
+            key-positions = <20 21>;
         };
     };
 
@@ -258,8 +295,8 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB       &kp Q  &kp L  &kp M            &kp P       &kp X               &kp SQT          &kp F       &kp O                       &kp U     &kp J      &kp RA(A)
-&super_shift  &kp D  &kp R  &kp S            &kp T       &kp B               &kp Y            &kp N       &kp A                       &kp E     &kp I      &mt RIGHT_SHIFT SLASH
+&kp TAB       &kp Q  &kp L  &kp M            &kp P       &kp X               &key_repeat      &kp F       &kp O                       &kp U     &kp J      &kp RA(A)
+&super_shift  &kp D  &kp R  &kp T            &kp S       &kp B               &kp Y            &kp N       &kp A                       &kp E     &kp I      &mt RIGHT_SHIFT SLASH
 &kp LCTRL     &kp G  &kp H  &kp W            &kp C       &kp V               &kp Z            &kp K       &mod_com                    &mod_per  &kp MINUS  &kp RIGHT_ALT
                             &adv_repeat 3 0  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &mt RIGHT_GUI SINGLE_QUOTE
             >;
