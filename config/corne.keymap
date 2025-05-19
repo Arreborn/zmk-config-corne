@@ -24,6 +24,15 @@
             hold-trigger-on-release;
         };
 
+        ak_h: ak_h {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp H>;
+
+            akt_ah { trigger-keys = <H>; max-prior-idle-ms = <300>; bindings = <&kp O>; };
+            akt_uh { trigger-keys = <L>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+        };
+
         para: para {
             compatible = "zmk,behavior-tap-dance";
             label = "PARA";
