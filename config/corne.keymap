@@ -40,8 +40,6 @@
                 max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
             };
-
-            label = "ak_per";
         };
 
         para: para {
