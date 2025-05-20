@@ -31,31 +31,6 @@
             bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
         };
 
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
-            #binding-cells = <0>;
-            continue-list = <MINUS BACKSPACE>;
-        };
-
-        paraless: paraless {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARALESS";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        paragreat: paragreat {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARAGREAT";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         brace: brace {
             compatible = "zmk,behavior-tap-dance";
             label = "BRACE";
@@ -152,6 +127,33 @@
             require-prior-idle-ms = <60>;
             flavor = "tap-preferred";
         };
+
+        shift_para: shift_para {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_PARA";
+            bindings = <&para>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        shift_bracket: shift_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_BRACKET";
+            bindings = <&bracket>, <&kp RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        shift_brace: shift_brace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_BRACE";
+            bindings = <&brace>, <&kp RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -166,80 +168,42 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
+        per_auto: per_auto {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp SPACE &sk LEFT_SHIFT>;
+            label = "PER_AUTO";
+        };
+
+        com_auto: com_auto {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "COM_AUTO";
+        };
+
+        exl_auto: exl_auto {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION &kp SPACE &sk LEFT_SHIFT>;
+            label = "EXL_AUTO";
+        };
+
+        ques_auto: ques_auto {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION &kp SPACE &sk LEFT_SHIFT>;
+            label = "QUES_AUTO";
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        Moosewings_L {
-            bindings = <&brace>;
-            key-positions = <16 38 39>;
-            timeout-ms = <50>;
-        };
-
-        Para_L {
-            bindings = <&para>;
-            key-positions = <15 38 39>;
-        };
-
-        Bracket_R {
-            bindings = <&bracket>;
-            key-positions = <14 38 39>;
-        };
-
-        sym_1 {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <13 1>;
-        };
-
-        sym_2 {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <2 14>;
-        };
-
-        sym_3 {
-            bindings = <&kp HASH>;
-            key-positions = <3 15>;
-        };
-
-        sym_4 {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-        };
-
-        sym_5 {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-        };
-
-        sym_6 {
-            bindings = <&kp CARET>;
-            key-positions = <6 18>;
-        };
-
-        sym_7 {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <7 19>;
-        };
-
         sym_8 {
             bindings = <&kp RA(U)>;
-            key-positions = <9 21>;
-        };
-
-        sym_9 {
-            bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <8 20>;
-        };
-
-        sym_10 {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <10 22>;
-        };
-
-        qm {
-            bindings = <&kp QUESTION>;
-            key-positions = <22 23>;
         };
     };
 
@@ -259,7 +223,7 @@
 
             bindings = <
 &kp TAB       &kp Q  &kp L  &kp M            &kp P       &kp X               &key_repeat      &kp F       &kp O                       &kp U     &kp J      &kp RA(A)
-&super_shift  &kp D  &kp R  &kp T            &kp S       &kp B               &kp Y            &kp N       &kp A                       &kp E     &kp I      &mt RIGHT_SHIFT SLASH
+&super_shift  &kp D  &kp R  &kp S            &kp T       &kp B               &kp Y            &kp N       &kp A                       &kp E     &kp I      &mt RIGHT_SHIFT SLASH
 &kp LCTRL     &kp G  &kp H  &kp W            &kp C       &kp V               &kp Z            &kp K       &mod_com                    &mod_per  &kp MINUS  &kp RIGHT_ALT
                             &adv_repeat 3 0  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &mt RIGHT_GUI SINGLE_QUOTE
             >;
@@ -276,8 +240,8 @@
 
             bindings = <
 &trans            &kp LEFT_ARROW  &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp PERIOD    &kp UP_ARROW     &kp N7        &kp N8         &kp N9        &kp RIGHT_ARROW  &trans
-&mo 3             &trans          &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS     &kp BACKSPACE    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_0     &mo 4
-&kp LEFT_CONTROL  &trans          &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH     &kp DOWN_ARROW   &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &trans           &kp RIGHT_ALT
+&mo 5             &kp LC(A)       &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS     &kp BACKSPACE    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_0     &mo 4
+&kp LEFT_CONTROL  &kp LC(X)       &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH     &kp DOWN_ARROW   &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &trans           &kp RIGHT_ALT
                                                    &mo 3             &shift_del    &trans        &adv_lt 4 ENTER  &shift_tab    &kp RIGHT_GUI
             >;
         };
@@ -292,10 +256,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans            &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT           &kp CARET  &kp AMPS    &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR  &kp QUESTION
-&trans            &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE           &kp MINUS  &kp EQUAL   &kp LBKT       &kp RBKT              &kp BSLH  &trans
-&kp LEFT_CONTROL  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE           &kp UNDER  &kp PLUS    &kp LBRC       &kp RBRC              &kp PIPE  &kp RIGHT_ALT
-                                            &kp LGUI        &shift_del       &adv_lt 4 ESCAPE    &trans     &shift_tab  &kp RIGHT_GUI
+&trans            &kp EXCL        &kp AT            &kp HASH      &kp DLLR         &kp PRCNT           &kp CARET  &kp AMPS    &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR        &kp QUESTION
+&super_shift      &shift_bracket  &trans            &kp QUESTION  &kp EXCLAMATION  &kp GRAVE           &kp MINUS  &kp EQUAL   &shift_para    &shift_brace          &shift_bracket  &kp BACKSLASH
+&kp LEFT_CONTROL  &kp LESS_THAN   &kp GREATER_THAN  &ques_auto    &exl_auto        &kp TILDE           &kp UNDER  &kp PLUS    &com_auto      &per_auto             &kp PIPE        &kp RIGHT_ALT
+                                                    &kp LGUI      &shift_del       &adv_lt 4 ESCAPE    &trans     &shift_tab  &kp RIGHT_GUI
             >;
         };
 
@@ -309,13 +273,26 @@
             >;
         };
 
-        Conf {
+        Configure {
             bindings = <
 &kp ESCAPE  &trans  &trans  &trans  &trans  &studio_unlock    &bootloader  &trans  &trans  &trans  &trans  &trans
 &trans      &trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans
 &trans      &trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans
                             &trans  &trans  &trans            &trans       &trans  &trans
             >;
+
+            label = "CONF";
+        };
+
+        Mini-nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &para           &kp UP_ARROW    &bracket         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans          &trans
+            >;
+
+            label = "MINI";
         };
     };
 
