@@ -154,6 +154,14 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        swe_chars: swe_chars {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SWE_CHARS";
+            #binding-cells = <0>;
+            tapping-term-ms = <50>;
+            bindings = <&kp RA(A)>, <&kp RA(U)>;
+        };
     };
 
     macros {
@@ -222,10 +230,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB       &kp Q  &kp L  &kp M            &kp P       &kp X               &key_repeat      &kp F       &kp O                       &kp U     &kp J      &kp RA(A)
-&super_shift  &kp D  &kp R  &kp S            &kp T       &kp B               &kp Y            &kp N       &kp A                       &kp E     &kp I      &mt RIGHT_SHIFT SLASH
-&kp LCTRL     &kp G  &kp H  &kp W            &kp C       &kp V               &kp Z            &kp K       &mod_com                    &mod_per  &kp MINUS  &kp RIGHT_ALT
-                            &adv_repeat 3 0  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &mt RIGHT_GUI SINGLE_QUOTE
+&kp TAB       &kp B  &kp L  &kp M             &kp P       &kp X               &key_repeat      &kp F       &kp O                       &kp U     &swe_chars  &kp MINUS
+&super_shift  &kp D  &kp R  &kp T             &kp S       &kp Q               &kp Y            &kp N       &kp A                       &kp E     &kp I       &mt RIGHT_SHIFT SLASH
+&kp LCTRL     &kp G  &kp W  &kp K             &kp C       &kp V               &kp Z            &kp H       &mod_com                    &mod_per  &kp J       &kp RIGHT_ALT
+                            &adv_lt 3 ESCAPE  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &mt RIGHT_GUI SINGLE_QUOTE
             >;
         };
 
@@ -256,10 +264,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans            &kp EXCL        &kp AT            &kp HASH      &kp DLLR         &kp PRCNT           &kp CARET  &kp AMPS    &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR        &kp QUESTION
-&super_shift      &shift_bracket  &trans            &kp QUESTION  &kp EXCLAMATION  &kp GRAVE           &kp MINUS  &kp EQUAL   &shift_para    &shift_brace          &shift_bracket  &kp BACKSLASH
-&kp LEFT_CONTROL  &kp LESS_THAN   &kp GREATER_THAN  &ques_auto    &exl_auto        &kp TILDE           &kp UNDER  &kp PLUS    &com_auto      &per_auto             &kp PIPE        &kp RIGHT_ALT
-                                                    &kp LGUI      &shift_del       &adv_lt 4 ESCAPE    &trans     &shift_tab  &kp RIGHT_GUI
+&trans            &kp EXCL       &kp AT            &kp HASH      &kp DLLR         &kp PRCNT           &kp CARET  &kp AMPS    &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR        &kp QUESTION
+&super_shift      &trans         &trans            &kp QUESTION  &kp EXCLAMATION  &kp GRAVE           &kp MINUS  &kp EQUAL   &shift_para    &shift_brace          &shift_bracket  &kp BACKSLASH
+&kp LEFT_CONTROL  &kp LESS_THAN  &kp GREATER_THAN  &ques_auto    &exl_auto        &kp TILDE           &kp UNDER  &kp PLUS    &com_auto      &per_auto             &kp PIPE        &kp RIGHT_ALT
+                                                   &kp LGUI      &shift_del       &adv_lt 4 ESCAPE    &trans     &shift_tab  &kp RIGHT_GUI
             >;
         };
 
@@ -275,10 +283,10 @@
 
         Configure {
             bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans  &studio_unlock    &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans            &trans       &trans  &trans
+&kp ESCAPE      &kp C_BRI_UP  &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP      &bootloader  &kp               &kp LC(UP_ARROW)  &kp                &kp  &kp
+&kp             &kp C_BRI_DN  &kp LG(LS(LEFT))  &kp LG(LS(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp          &kp LC(LS(LEFT))  &kp LG(ENTER)     &kp LS(LC(RIGHT))  &kp  &kp
+&studio_unlock  &kp           &kp               &kp                &kp                &kp C_VOLUME_DOWN    &kp          &kp               &kp               &kp                &kp  &bootloader
+                                                &kp                &kp                &kp                  &kp          &kp               &kp
             >;
 
             label = "CONF";
