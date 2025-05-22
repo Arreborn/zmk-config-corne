@@ -230,10 +230,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB       &kp B  &kp L  &kp M             &kp P       &kp X               &key_repeat      &kp F       &kp O                       &kp U     &swe_chars  &kp MINUS
-&super_shift  &kp D  &kp R  &kp T             &kp S       &kp Q               &kp Y            &kp N       &kp A                       &kp E     &kp I       &mt RIGHT_SHIFT SLASH
-&kp LCTRL     &kp G  &kp W  &kp K             &kp C       &kp V               &kp Z            &kp H       &mod_com                    &mod_per  &kp J       &kp RIGHT_ALT
-                            &adv_lt 3 ESCAPE  &shift_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &shift_tab  &mt RIGHT_GUI SINGLE_QUOTE
+&kp TAB       &kp B  &kp L  &kp M             &kp P       &kp X              &key_repeat      &kp F       &kp O                       &kp U     &swe_chars  &kp MINUS
+&super_shift  &kp D  &kp R  &kp T             &kp S       &kp Q              &kp Y            &kp N       &kp A                       &kp E     &kp I       &mt RIGHT_SHIFT SLASH
+&kp LCTRL     &kp G  &kp W  &kp K             &kp C       &kp V              &kp Z            &kp H       &mod_com                    &mod_per  &kp J       &kp RIGHT_ALT
+                            &adv_lt 3 ESCAPE  &shift_del  &adv_repeat 1 0    &adv_lt 2 ENTER  &shift_tab  &mt RIGHT_GUI SINGLE_QUOTE
             >;
         };
 
@@ -274,19 +274,19 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&browsertab       &kp C_BRI_INC  &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP      &kp C_PREV        &kp HOME  &kp UP_ARROW    &kp END    &kp PG_UP  &kp LS(LG(NUMBER_4))
-&super_shift      &kp C_BRI_DEC  &kp LS(LG(LEFT))  &kp LS(LG(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp C_PLAY_PAUSE  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp PG_DN  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp LG(Z)      &kp LG(X)         &kp LG(C)          &kp LG(V)          &kp C_VOLUME_DOWN    &kp C_NEXT        &trans    &trans          &trans     &trans     &kp RIGHT_ALT
-                                                   &trans             &kp LEFT_SHIFT     &kp LG(SPACE)        &kp LG(SPACE)     &kp TAB   &kp PG_UP
+&browsertab       &kp C_BRI_INC  &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP      &kp C_PREV        &kp HOME  &kp UP_ARROW        &kp END    &kp PG_UP  &kp LS(LG(NUMBER_4))
+&super_shift      &kp C_BRI_DEC  &kp LS(LG(LEFT))  &kp LS(LG(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp C_PLAY_PAUSE  &kp LEFT  &kp DOWN_ARROW      &kp RIGHT  &kp PG_DN  &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp LG(Z)      &kp LG(X)         &kp LG(C)          &kp LG(V)          &kp C_VOLUME_DOWN    &kp C_NEXT        &trans    &kp LC(DOWN_ARROW)  &trans     &trans     &kp RIGHT_ALT
+                                                   &trans             &kp LEFT_SHIFT     &kp LG(SPACE)        &kp ENTER         &kp TAB   &kp PG_UP
             >;
         };
 
         Configure {
             bindings = <
-&kp ESCAPE      &kp C_BRI_UP  &kp F16           &kp F17            &kp F18            &kp C_VOLUME_UP      &bootloader  &kp               &kp LC(UP_ARROW)  &kp                &kp  &kp
-&kp             &kp C_BRI_DN  &kp LG(LS(LEFT))  &kp LG(LS(SPACE))  &kp LS(LG(RIGHT))  &kp K_MUTE           &kp          &kp LC(LS(LEFT))  &kp LG(ENTER)     &kp LS(LC(RIGHT))  &kp  &kp
-&studio_unlock  &kp           &kp               &kp                &kp                &kp C_VOLUME_DOWN    &kp          &kp               &kp               &kp                &kp  &bootloader
-                                                &kp                &kp                &kp                  &kp          &kp               &kp
+&kp ESCAPE      &kp C_BRI_UP  &kp F16           &kp F17               &kp F18                   &kp C_VOLUME_UP      &bootloader  &none              &kp LC(UP_ARROW)   &none              &none  &none
+&none           &kp C_BRI_DN  &kp LG(LS(LEFT))  &kp LG(LS(SPACE))     &kp LS(LG(RIGHT))         &kp K_MUTE           &none        &kp LC(LS(LEFT))   &kp LG(ENTER)      &kp LS(LC(RIGHT))  &none  &none
+&studio_unlock  &none         &none             &kp LG(LS(NUMBER_4))  &kp LG(LC(LS(NUMBER_4)))  &kp C_VOLUME_DOWN    &none        &kp LG(LC(LS(T)))  &kp LG(LC(LS(S)))  &none              &none  &bootloader
+                                                &none                 &none                     &trans               &trans       &none              &none
             >;
 
             label = "CONF";
