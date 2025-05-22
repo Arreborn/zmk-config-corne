@@ -313,10 +313,10 @@
 
         Configure {
             bindings = <
-&kp ESCAPE      &kp C_BRI_UP  &kp F16               &kp F17               &kp F18                   &kp C_VOLUME_UP      &kp C_NEXT    &none              &kp LC(UP_ARROW)   &none              &none  &none
-&none           &kp C_BRI_DN  &kp LG(LS(LEFT))      &kp LG(LS(SPACE))     &kp LS(LG(RIGHT))         &kp K_MUTE           &kp LG(C_PP)  &kp LC(LS(LEFT))   &kp LG(ENTER)      &kp LS(LC(RIGHT))  &none  &none
-&studio_unlock  &none         &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &kp LG(LC(LS(NUMBER_4)))  &kp C_VOLUME_DOWN    &kp C_PREV    &kp LG(LC(LS(T)))  &kp LG(LC(LS(S)))  &kp LG(LA(LC(R)))  &none  &bootloader
-                                                    &none                 &none                     &trans               &trans        &none              &none
+&kp ESCAPE      &kp C_BRI_UP           &kp F16               &kp F17               &kp F18                   &kp C_VOLUME_UP      &kp C_NEXT    &none              &kp LC(UP_ARROW)   &none              &none  &none
+&none           &kp C_BRI_DN           &kp LG(LS(LEFT))      &kp LG(LS(SPACE))     &kp LS(LG(RIGHT))         &kp K_MUTE           &kp LG(C_PP)  &kp LC(LS(LEFT))   &kp LG(ENTER)      &kp LS(LC(RIGHT))  &none  &none
+&studio_unlock  &kp LC(LA(LG(SPACE)))  &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &kp LG(LC(LS(NUMBER_4)))  &kp C_VOLUME_DOWN    &kp C_PREV    &kp LG(LC(LS(T)))  &kp LG(LC(LS(S)))  &kp LG(LA(LC(R)))  &none  &bootloader
+                                                             &none                 &none                     &trans               &trans        &none              &none
             >;
 
             label = "CONF";
