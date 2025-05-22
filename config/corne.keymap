@@ -227,6 +227,13 @@
             bindings = <&kp QUESTION &kp SPACE &sk LEFT_SHIFT>;
             label = "QUES_AUTO";
         };
+
+        sci_ho: sci_ho {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp O>;
+            label = "SCI_HO";
+        };
     };
 
     combos {
@@ -253,9 +260,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                     &kp B  &kp L  &kp M             &kp P       &kp X              &mt LS(LEFT_GUI) LG(S)  &kp F       &kp O                       &kp U     &swe_chars  &kp MINUS
-&s_shift LEFT_SHIFT 0       &kp D  &kp R  &kp T             &kp S       &kp Q              &kp Y                   &kp N       &kp A                       &kp E     &kp I       &mt RIGHT_SHIFT SLASH
-&sk_mod LCTRL LEFT_CONTROL  &kp G  &kp W  &kp K             &kp C       &kp V              &kp Z                   &kp H       &mod_com                    &mod_per  &kp J       &sk_mod RIGHT_ALT RIGHT_ALT
+&kp TAB                     &kp B  &kp L  &kp M             &kp P       &kp X              &mt LS(LEFT_GUI) LG(S)  &kp F       &kp O                       &kp U     &kp J      &swe_chars
+&s_shift LEFT_SHIFT 0       &kp D  &kp R  &kp T             &kp S       &kp Q              &kp Y                   &kp N       &kp A                       &kp E     &kp I      &mt RIGHT_SHIFT SLASH
+&sk_mod LCTRL LEFT_CONTROL  &kp G  &kp W  &kp K             &kp C       &kp V              &kp Z                   &kp H       &mod_com                    &mod_per  &kp MINUS  &sk_mod RIGHT_ALT RIGHT_ALT
                                           &adv_lt 3 ESCAPE  &shift_del  &adv_repeat 1 0    &adv_lt 2 ENTER         &shift_tab  &mt RIGHT_GUI SINGLE_QUOTE
             >;
         };
@@ -270,7 +277,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans                             &kp LEFT_ARROW  &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp PERIOD    &kp UP_ARROW     &kp N7        &kp N8         &kp N9        &kp RIGHT_ARROW  &trans
+&kp LC(LA(LEFT_GUI))               &kp LEFT_ARROW  &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp PERIOD    &kp UP_ARROW     &kp N7        &kp N8         &kp N9        &kp RIGHT_ARROW  &trans
 &mo 5                              &kp LC(A)       &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS     &kp BACKSPACE    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_0     &mo 4
 &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp LC(X)       &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH     &kp DOWN_ARROW   &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &trans           &sk_mod RIGHT_ALT RIGHT_ALT
                                                                     &mo 3             &shift_del    &trans        &adv_lt 4 ENTER  &shift_tab    &kp RIGHT_GUI
