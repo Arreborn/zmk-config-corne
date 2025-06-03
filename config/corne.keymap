@@ -332,10 +332,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp LEFT_ARROW  &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp NON_US_BACKSLASH    &kp NUMBER_6    &kp N7        &kp N8        &kp N9        &kp N0       &trans
-&trans  &kp LC(A)       &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS               &kp LEFT        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT    &kp LEFT_GUI
-&mo 5   &kp LC(X)       &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH               &shift_bracket  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &shift_para  &trans
-                                         &trans            &trans        &adv_lt 4 ESCAPE        &trans          &trans        &trans
+&trans  &none      &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp NON_US_BACKSLASH    &kp NUMBER_6    &kp N7        &kp N8        &kp N9        &kp N0       &trans
+&trans  &kp LC(A)  &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS               &kp LEFT        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT    &kp LEFT_GUI
+&mo 5   &kp LC(X)  &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH               &shift_bracket  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &shift_para  &trans
+                                    &trans            &trans        &adv_lt 4 ESCAPE        &trans          &trans        &trans
             >;
         };
 
@@ -349,17 +349,17 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL               &kp AT            &kp HASH      &kp DLLR         &kp PRCNT     &kp CARET  &kp AMPS   &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RPAR        &kp QUESTION
-&trans  &s_shift LEFT_SHIFT 0  &kp LEFT_SHIFT    &kp QUESTION  &kp EXCLAMATION  &kp GRAVE     &kp MINUS  &kp EQUAL  &shift_para  &shift_brace          &shift_bracket  &kp BACKSLASH
-&trans  &kp LESS_THAN          &kp GREATER_THAN  &ques_auto    &exl_auto        &kp TILDE     &kp UNDER  &kp PLUS   &trans       &com_auto             &per_auto       &kp PIPE
-                                                 &trans        &trans           &kp ESCAPE    &kp ENTER  &trans     &trans
+&trans  &kp EXCL       &kp AT            &kp HASH      &kp DLLR         &kp PRCNT     &kp CARET  &kp AMPS   &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RPAR        &kp QUESTION
+&trans  &kp LS(LG(E))  &kp LEFT_SHIFT    &kp QUESTION  &kp EXCLAMATION  &kp GRAVE     &kp MINUS  &kp EQUAL  &shift_para  &shift_brace          &shift_bracket  &kp BACKSLASH
+&trans  &kp LESS_THAN  &kp GREATER_THAN  &ques_auto    &exl_auto        &kp TILDE     &kp UNDER  &kp PLUS   &trans       &com_auto             &per_auto       &kp PIPE
+                                         &trans        &trans           &kp ESCAPE    &kp ENTER  &trans     &trans
             >;
         };
 
         NAV {
             display-name = "Nav";
             bindings = <
-&kp TAB      &kp LG(Q)              &kp LG(W)                  &kp LG(LS(E))              &kp LG(R)                          &kp C_VOLUME_UP      &kp C_PREV       &kp HOME              &kp PG_DN           &kp PG_UP         &kp END                &kp LG(L)
+&kp TAB      &kp LG(Q)              &kp LG(W)                  &kp LG(E)                  &kp LG(R)                          &kp C_VOLUME_UP      &kp C_PREV       &kp HOME              &kp PG_DN           &kp PG_UP         &kp END                &kp LG(L)
 &browsertab  &s_shift LEFT_SHIFT 0  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp K_MUTE           &kp LS(LG(R))    &kp LEFT              &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT              &kp RIGHT_SHIFT
 &kp GLOBE    &kp LG(Z)              &kp LG(X)                  &kp LG(C)                  &kp LG(V)                          &kp C_VOLUME_DOWN    &kp C_NEXT       &kp LG(LEFT_BRACKET)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LG(RIGHT_BRACKET)  &trans
                                                                &trans                     &trans                             &trans               &adv_lt 4 ENTER  &trans                &trans
@@ -368,10 +368,10 @@
 
         Configure {
             bindings = <
-&kp ESCAPE      &kp C_BRI_UP           &kp F16               &kp F17               &kp F18                   &kp C_VOLUME_UP      &kp C_NEXT    &none              &none               &none              &none              &none
-&none           &kp C_BRI_DN           &kp LG(LS(LEFT))      &kp LG(LS(SPACE))     &kp LS(LG(RIGHT))         &kp K_MUTE           &kp LG(C_PP)  &kp LC(LS(LEFT))   &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)   &kp LS(LC(RIGHT))  &none
-&studio_unlock  &kp LC(LA(LG(SPACE)))  &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &kp LG(LC(LS(NUMBER_4)))  &kp C_VOLUME_DOWN    &kp C_PREV    &kp LG(LC(LS(T)))  &kp LG(LC(LS(S)))   &kp LG(LA(LC(R)))  &none              &bootloader
-                                                             &none                 &none                     &trans               &trans        &none              &none
+&kp TAB         &kp C_BRI_UP       &kp LC(LA(LG(N8)))    &kp LC(LS(LG(P)))     &kp LG(LC(LS(M)))         &kp C_VOLUME_UP      &kp C_NEXT  &kp LC(LS(LEFT))  &kp LC(DOWN)       &kp LC(UP_ARROW)       &kp LS(LC(RIGHT))  &kp LG(SPACE)
+&kp ESCAPE      &kp LC(LS(LG(D)))  &kp LG(LS(LC(R)))     &kp LG(LS(LC(T)))     &kp LS(LG(LC(S)))         &kp K_MUTE           &kp C_PP    &kp LS(LG(LEFT))  &kp LG(LS(SPACE))  &kp LC(LA(LG(SPACE)))  &kp LS(LG(RIGHT))  &kp LC(LA(LG(SPACE)))
+&studio_unlock  &kp C_BRI_DN       &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &kp LG(LC(LS(NUMBER_4)))  &kp C_VOLUME_DOWN    &kp C_PREV  &kp F16           &kp F17            &kp F18                &kp LG(M)          &bootloader
+                                                         &none                 &none                     &trans               &trans      &none             &none
             >;
 
             label = "CONF";
