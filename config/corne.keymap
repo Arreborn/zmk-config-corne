@@ -325,7 +325,7 @@
 &kp TAB                &kp B  &kp L  &kp P                        &kp M       &kp X               &mt LS(LEFT_GUI) LG(LS(S))  &kp F       &kp O                       &kp U     &kp J     &kp LG(SPACE)
 &s_shift LEFT_SHIFT 0  &kp D  &kp R  &kp T                        &kp S       &kp V               &kp Y                       &kp N       &kp A                       &kp E     &kp I     &mt RIGHT_SHIFT SLASH
 &mo 2                  &kp G  &kp W  &kp K                        &kp C       &kp Q               &kp Z                       &kp H       &kp MINUS                   &mod_com  &mod_per  &sk_mod RIGHT_ALT RIGHT_ALT
-                                     &adv_repeat RIGHT_CONTROL 0  &shift_tab  &adv_lt 3 ESCAPE    &adv_lt 1 ENTER             &shift_del  &mt RIGHT_GUI SINGLE_QUOTE
+                                     &adv_repeat RIGHT_CONTROL 0  &shift_del  &adv_lt 3 ESCAPE    &adv_lt 1 ENTER             &shift_tab  &mt RIGHT_GUI SINGLE_QUOTE
             >;
         };
 
