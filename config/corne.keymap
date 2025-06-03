@@ -131,10 +131,10 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        shift_brace: shift_brace {
+        shift_angle: shift_angle {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_BRACE";
-            bindings = <&brace>, <&kp RIGHT_BRACE>;
+            label = "SHIFT_ANGLE";
+            bindings = <&angle_brckt>, <&kp GREATER_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
@@ -193,6 +193,13 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
+        };
+
+        angle_brckt: angle_brckt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ANGLE_BRCKT";
+            #binding-cells = <0>;
+            bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
         };
     };
 
@@ -349,20 +356,20 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL       &kp AT            &kp HASH      &kp DLLR         &kp PRCNT     &kp CARET  &kp AMPS   &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RPAR        &kp QUESTION
-&trans  &kp LS(LG(E))  &kp LEFT_SHIFT    &kp QUESTION  &kp EXCLAMATION  &kp GRAVE     &kp MINUS  &kp EQUAL  &shift_para  &shift_brace          &shift_bracket  &kp BACKSLASH
-&trans  &kp LESS_THAN  &kp GREATER_THAN  &ques_auto    &exl_auto        &kp TILDE     &kp UNDER  &kp PLUS   &trans       &com_auto             &per_auto       &kp PIPE
-                                         &trans        &trans           &kp ESCAPE    &kp ENTER  &trans     &trans
+&trans  &kp EXCL  &kp AT       &kp HASH      &kp DLLR         &kp PRCNT     &kp CARET      &kp AMPS   &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RPAR        &kp QUESTION
+&trans  &none     &s_shift_td  &kp QUESTION  &kp EXCLAMATION  &kp GRAVE     &shift_angle   &kp EQUAL  &shift_para  &shift_angle          &shift_bracket  &trans
+&trans  &none     &kp TILDE    &ques_auto    &exl_auto        &kp PIPE      &kp LS(LG(E))  &kp PLUS   &trans       &com_auto             &per_auto       &kp NON_US_BACKSLASH
+                               &trans        &trans           &kp ESCAPE    &kp ENTER      &trans     &trans
             >;
         };
 
         NAV {
             display-name = "Nav";
             bindings = <
-&kp TAB      &kp LG(Q)              &kp LG(W)                  &kp LG(E)                  &kp LG(R)                          &kp C_VOLUME_UP      &kp C_PREV       &kp HOME              &kp PG_DN           &kp PG_UP         &kp END                &kp LG(L)
-&browsertab  &s_shift LEFT_SHIFT 0  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp K_MUTE           &kp LS(LG(R))    &kp LEFT              &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT              &kp RIGHT_SHIFT
-&kp GLOBE    &kp LG(Z)              &kp LG(X)                  &kp LG(C)                  &kp LG(V)                          &kp C_VOLUME_DOWN    &kp C_NEXT       &kp LG(LEFT_BRACKET)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LG(RIGHT_BRACKET)  &trans
-                                                               &trans                     &trans                             &trans               &adv_lt 4 ENTER  &trans                &trans
+&kp TAB      &kp LG(Q)              &kp LG(W)                  &kp LG(E)                  &kp LG(R)                          &kp LG(LS(T))           &trans                 &kp HOME      &kp PG_DN           &kp PG_UP         &kp END        &kp LG(L)
+&browsertab  &s_shift LEFT_SHIFT 0  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp LG(F)               &kp LS(LG(R))          &kp LEFT      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT      &kp RIGHT_SHIFT
+&kp GLOBE    &kp LG(Z)              &kp LG(X)                  &kp LG(C)                  &kp LG(V)                          &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp LC(LEFT)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
+                                                               &trans                     &trans                             &trans                  &adv_lt 4 ENTER        &trans        &trans
             >;
         };
 
