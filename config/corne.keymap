@@ -210,6 +210,30 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
+        homerow: homerow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <120>;
+            quick-tap-ms = <80>;
+            require-prior-idle-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        quick_tap: quick_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "QUICK_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <70>;
+            require-prior-idle-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -289,7 +313,7 @@
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp TAB>,
-                <&macro_wait_time 70>,
+                <&macro_wait_time 1000>,
                 <&macro_release>,
                 <&kp LEFT_GUI>;
 
@@ -346,10 +370,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB      &kp B  &kp L  &kp P                        &kp M       &kp X               &mt LS(LEFT_GUI) LG(LS(S))  &kp F       &kp O                       &kp U     &kp J     &kp LG(SPACE)
-&s_shift_td  &kp D  &kp R  &kp T                        &kp S       &kp V               &kp Y                       &kp N       &kp A                       &kp E     &kp I     &mt RIGHT_SHIFT SLASH
-&mo 2        &kp G  &kp W  &kp K                        &kp C       &kp Q               &kp Z                       &kp H       &kp MINUS                   &mod_com  &mod_per  &sk_mod RIGHT_ALT RIGHT_ALT
-                           &adv_repeat RIGHT_CONTROL 0  &shift_del  &adv_lt 3 ESCAPE    &adv_lt 1 ENTER             &shift_tab  &mt RIGHT_GUI SINGLE_QUOTE
+&kp TAB      &kp B  &kp L  &kp P                        &kp M                  &kp X               &kp LS(LG(R))    &kp F       &kp O                     &kp U     &kp J     &kp LG(SPACE)
+&s_shift_td  &kp D  &kp R  &kp T                        &homerow LEFT_SHIFT S  &kp V               &kp Y            &kp N       &kp A                     &kp E     &kp I     &quick_tap RIGHT_SHIFT SLASH
+&mo 2        &kp G  &kp W  &kp K                        &kp C                  &kp Q               &kp Z            &kp H       &kp MINUS                 &mod_com  &mod_per  &sk_mod RIGHT_ALT RIGHT_ALT
+                           &adv_repeat RIGHT_CONTROL 0  &shift_del             &adv_lt 3 ESCAPE    &adv_lt 1 ENTER  &shift_tab  &quick_tap RIGHT_GUI SQT
             >;
         };
 
