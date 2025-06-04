@@ -219,8 +219,11 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-on-release;
+            hold-trigger-key-positions = <16 15 14 13>;
         };
+
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -229,7 +232,9 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-on-release;
+            hold-trigger-key-positions = <19 20 21 22 41>;
         };
 
         quick_tap: quick_tap {
@@ -379,10 +384,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB      &kp B  &kp L  &kp P                        &kp M                  &kp X               &kp LS(LG(R))    &kp F       &kp O                     &kp U     &kp J     &kp LG(SPACE)
-&s_shift_td  &kp D  &kp R  &kp T                        &homerow LEFT_SHIFT S  &kp V               &kp Y            &kp N       &kp A                     &kp E     &kp I     &quick_tap RIGHT_SHIFT SLASH
-&mo 2        &kp G  &kp W  &kp K                        &kp C                  &kp Q               &kp Z            &kp H       &kp MINUS                 &mod_com  &mod_per  &sk_mod RIGHT_ALT RIGHT_ALT
-                           &adv_repeat RIGHT_CONTROL 0  &shift_del             &adv_lt 3 ESCAPE    &adv_lt 1 ENTER  &shift_tab  &quick_tap RIGHT_GUI SQT
+&kp TAB      &kp B            &kp L            &kp P                        &kp M              &kp X               &kp LS(LG(R))    &kp F               &kp O                 &kp U             &kp J             &kp LG(SPACE)
+&s_shift_td  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LEFT_CONTROL T          &hml LEFT_SHIFT S  &kp V               &kp Y            &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL A  &hmr RIGHT_ALT E  &hmr RIGHT_GUI I  &quick_tap RIGHT_SHIFT SLASH
+&mo 2        &kp G            &kp W            &kp K                        &kp C              &kp Q               &kp Z            &kp H               &kp MINUS             &mod_com          &mod_per          &sk_mod RIGHT_ALT RIGHT_ALT
+                                               &adv_repeat RIGHT_CONTROL 0  &shift_del         &adv_lt 3 ESCAPE    &adv_lt 1 ENTER  &shift_tab          &hmr RIGHT_GUI SQT
             >;
         };
 
