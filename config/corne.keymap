@@ -502,7 +502,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans     &ques_auto
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &exl_auto  &com_auto  &per_auto  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &exl_auto  &per_auto  &com_auto  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
