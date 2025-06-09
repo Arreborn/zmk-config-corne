@@ -212,6 +212,13 @@
             tapping-term-ms = <150>;
             flavor = "balanced";
         };
+
+        gt_lt_tap: gt_lt_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GT_LT_TAP";
+            #binding-cells = <0>;
+            bindings = <&lte>, <&gte>;
+        };
     };
 
     macros {
@@ -282,6 +289,20 @@
             bindings = <&kp I &kp W>;
             label = "INNER_WORD";
         };
+
+        lte: lte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp EQUAL>;
+            label = "LTE";
+        };
+
+        gte: gte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GT &kp EQUAL>;
+            label = "GTE";
+        };
     };
 
     combos {
@@ -318,7 +339,7 @@
         };
 
         shift_layer {
-            bindings = <&sl 7>;
+            bindings = <&sl 0>;
             key-positions = <37 40>;
         };
     };
@@ -372,10 +393,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL   &kp AT           &kp HASH      &kp DLLR   &kp PRCNT        &kp CARET       &kp AMPS   &kp ASTRK     &kp LEFT_PARENTHESIS  &kp RPAR  &kp QUESTION
-&trans  &kp TILDE  &kp EXCLAMATION  &kp QUESTION  &kp GRAVE  &kp LG(LS(E))    &shift_para     &kp EQUAL  &shift_brace  &trans                &trans    &trans
-&trans  &kp SLASH  &exl_auto        &ques_auto    &kp PIPE   &trans           &shift_bracket  &kp PLUS   &shift_angle  &mod_per              &mod_com  &kp NON_US_BACKSLASH
-                                    &trans        &trans     &kp ESCAPE       &kp ENTER       &trans     &trans
+&trans  &kp EXCL    &kp AT           &kp HASH      &kp DLLR      &kp PRCNT     &kp CARET       &kp AMPS     &kp ASTRK     &kp LEFT_PARENTHESIS  &kp RPAR   &kp QUESTION
+&trans  &gt_lt_tap  &kp EXCLAMATION  &kp QUESTION  &kp PLUS      &kp MINUS     &shift_para     &kp EQUAL    &shift_brace  &shift_angle          &kp GRAVE  &trans
+&trans  &kp PIPE    &exl_auto        &ques_auto    &kp ASTERISK  &kp SLASH     &shift_bracket  &key_repeat  &trans        &mod_per              &mod_com   &kp NON_US_BACKSLASH
+                                     &trans        &trans        &kp ESCAPE    &kp ENTER       &trans       &trans
             >;
         };
 
@@ -420,17 +441,6 @@
             >;
 
             label = "Fun";
-        };
-
-        Shifter {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans     &ques_auto
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &exl_auto  &per_auto  &com_auto  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "Shift";
         };
     };
 
