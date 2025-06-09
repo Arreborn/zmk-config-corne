@@ -338,10 +338,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB         &kp B  &kp L  &kp P                        &kp M       &kp X               &kp LS(LG(S))    &kp F       &kp O                 &kp U     &kp J     &kp LG(SPACE)
-&s_shift_td     &kp D  &kp R  &kp T                        &kp S       &kp V               &kp Y            &kp N       &kp A                 &kp E     &kp I     &quick_tap RIGHT_SHIFT SLASH
-&layer_tap 2 2  &kp G  &kp W  &kp K                        &kp C       &kp Q               &kp Z            &kp H       &kp SQT               &mod_per  &mod_com  &sk_mod RIGHT_ALT RIGHT_ALT
-                              &adv_repeat RIGHT_CONTROL 0  &shift_del  &adv_lt 3 ESCAPE    &adv_lt 1 ENTER  &shift_tab  &hmr RIGHT_GUI MINUS
+&kp TAB                     &kp B  &kp L  &kp P           &kp M       &kp X               &kp LS(LG(S))    &kp F       &kp O                &kp U     &kp J     &kp LG(SPACE)
+&s_shift_td                 &kp D  &kp R  &kp T           &kp S       &kp V               &kp Y            &kp N       &kp A                &kp E     &kp I     &quick_tap RIGHT_SHIFT SLASH
+&adv_repeat LEFT_CONTROL 0  &kp G  &kp W  &kp K           &kp C       &kp Q               &kp Z            &kp H       &kp SQT              &mod_per  &mod_com  &adv_repeat RIGHT_ALT 0
+                                          &layer_tap 2 2  &shift_del  &adv_lt 4 ESCAPE    &adv_lt 1 ENTER  &shift_tab  &mt RIGHT_GUI MINUS
             >;
         };
 
@@ -358,7 +358,7 @@
 &trans  &none      &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp NON_US_BACKSLASH    &kp NUMBER_6    &kp N7        &kp N8        &kp N9        &kp N0       &trans
 &mo 5   &kp LC(A)  &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS               &shift_para     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0       &kp LEFT_GUI
 &trans  &kp LC(X)  &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH               &shift_bracket  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &key_repeat  &trans
-                                    &layer_tap 6 6    &trans        &adv_lt 4 ESCAPE        &trans          &trans        &trans
+                                    &layer_tap 6 6    &trans        &adv_lt 5 ESCAPE        &trans          &trans        &trans
             >;
         };
 
@@ -372,10 +372,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT       &kp HASH      &kp DLLR         &kp PRCNT     &kp CARET      &kp AMPS   &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RPAR        &kp QUESTION
-&trans  &none     &s_shift_td  &kp QUESTION  &kp EXCLAMATION  &kp GRAVE     &shift_angle   &kp EQUAL  &shift_para  &shift_brace          &shift_bracket  &trans
-&trans  &none     &kp TILDE    &ques_auto    &exl_auto        &kp PIPE      &kp LS(LG(E))  &kp PLUS   &trans       &mod_per              &mod_com        &kp NON_US_BACKSLASH
-                               &trans        &trans           &kp ESCAPE    &kp ENTER      &trans     &trans
+&trans  &kp EXCL   &kp AT           &kp HASH      &kp DLLR         &kp PRCNT     &kp CARET      &kp AMPS   &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RPAR        &kp QUESTION
+&trans  &kp TILDE  &kp EXCLAMATION  &kp QUESTION  &kp EXCLAMATION  &kp GRAVE     &shift_angle   &kp EQUAL  &shift_para  &shift_brace          &shift_bracket  &trans
+&trans  &kp SLASH  &exl_auto        &ques_auto    &exl_auto        &kp PIPE      &kp LS(LG(E))  &kp PLUS   &trans       &mod_per              &mod_com        &kp NON_US_BACKSLASH
+                                    &trans        &trans           &kp ESCAPE    &kp ENTER      &trans     &trans
             >;
         };
 
@@ -385,7 +385,7 @@
 &kp TAB                               &kp LG(E)              &kp LG(Q)                  &kp LG(W)                  &kp LG(R)                          &kp LG(LS(T))           &trans                 &kp HOME      &kp PG_DN           &kp PG_UP         &kp END        &kp LG(L)
 &browsertab                           &s_shift LEFT_SHIFT 0  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp LG(F)               &kp LS(LG(R))          &kp LEFT      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT      &kp F2
 &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp LG(Z)              &kp LG(X)                  &kp LG(C)                  &kp LG(V)                          &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp LC(LEFT)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
-                                                                                        &trans                     &trans                             &trans                  &adv_lt 4 ENTER        &trans        &trans
+                                                                                        &trans                     &trans                             &trans                  &adv_lt 5 ENTER        &trans        &trans
             >;
         };
 
