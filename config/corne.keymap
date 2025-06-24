@@ -13,27 +13,6 @@
 
 / {
     behaviors {
-        para: para {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PARA";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-        };
-
-        brace: brace {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BRACE";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
-        };
-
-        bracket: bracket {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BRACKET";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
-        };
-
         ctrl_tab: ctrl_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_TAB";
@@ -83,33 +62,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        shift_para: shift_para {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_PARA";
-            bindings = <&para>, <&kp RIGHT_PARENTHESIS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        shift_bracket: shift_bracket {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_BRACKET";
-            bindings = <&bracket>, <&kp RIGHT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        shift_angle: shift_angle {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_ANGLE";
-            bindings = <&angle_brckt>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
         sk_mod: sk_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "SK_MOD";
@@ -139,22 +91,6 @@
             flavor = "tap-preferred";
         };
 
-        angle_brckt: angle_brckt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ANGLE_BRCKT";
-            #binding-cells = <0>;
-            bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
-        };
-
-        shift_brace: shift_brace {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_BRACE";
-            bindings = <&brace>, <&kp RIGHT_BRACE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
         layer_tap: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP";
@@ -165,20 +101,29 @@
             flavor = "balanced";
         };
 
-        gt_lt_tap: gt_lt_tap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "GT_LT_TAP";
-            #binding-cells = <0>;
-            bindings = <&lte>, <&gte>;
-        };
-
-        super_para: super_para {
+        para_l: para_l {
             compatible = "zmk,behavior-mod-morph";
-            label = "SUPER_PARA";
-            bindings = <&bracket>, <&para>;
+            label = "PARA_L";
+            bindings = <&kp LEFT_BRACKET>, <&kp LEFT_PARENTHESIS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
+        };
+
+        para_r: para_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARA_R";
+            bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        para_tap: para_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PARA_TAP";
+            #binding-cells = <0>;
+            bindings = <&para_l>, <&para_r>;
         };
     };
 
@@ -287,10 +232,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                            &kp B  &kp L  &kp P                      &kp M      &kp X               &super_para      &kp F      &kp O                        &kp U     &kp J     &kp LG(LS(S))
+&kp TAB                            &kp B  &kp L  &kp P                      &kp M      &kp X               &para_tap        &kp F      &kp O                        &kp U     &kp J     &kp LG(LS(S))
 &s_shift_td                        &kp D  &kp R  &kp T                      &kp S      &kp V               &kp Y            &kp N      &kp A                        &kp E     &kp I     &mt RIGHT_SHIFT SLASH
 &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G  &kp W  &kp K                      &kp C      &kp Q               &kp Z            &kp H      &kp SQT                      &mod_com  &mod_per  &mt RIGHT_ALT MINUS
-                                                 &sk_mod LEFT_GUI LEFT_GUI  &ctrl_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &ctrl_tab  &sk_mod RIGHT_GUI RIGHT_GUI
+                                                 &sk_mod LEFT_GUI LEFT_GUI  &ctrl_del  &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab  &sk_mod RIGHT_GUI RIGHT_GUI
             >;
         };
 
@@ -304,20 +249,20 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans          &none      &kp AMPERSAND    &shift_angle  &kp PERCENT   &kp NON_US_BACKSLASH    &shift_bracket   &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
-&trans          &kp LC(A)  &kp EXCLAMATION  &kp EQUAL     &kp PLUS      &kp MINUS               &shift_brace     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
-&layer_tap 4 4  &kp LC(X)  &kp PIPE         &gt_lt_tap    &kp ASTERISK  &kp SLASH               &shift_para      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                                            &trans        &trans        &trans                  &adv_lt 3 ENTER  &trans        &trans
+&trans  &none      &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp NON_US_BACKSLASH    &trans          &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
+&trans  &kp LC(A)  &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS               &layer_tap 4 4  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
+&trans  &kp LC(X)  &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH               &kp LG(LS(E))   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+                                    &trans            &trans        &adv_lt 3 ESCAPE        &trans          &trans        &trans
             >;
         };
 
         NAV {
             display-name = "Nav";
             bindings = <
-&kp TAB                               &kp LG(E)              &kp LG(Q)                  &kp LG(W)                  &kp LG(R)                          &kp LG(LS(T))           &trans                 &kp HOME      &kp PG_DN           &kp PG_UP         &kp END        &kp LG(L)
-&browsertab                           &s_shift LEFT_SHIFT 0  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp LG(F)               &kp LS(LG(R))          &kp LEFT      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT      &kp F2
-&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp LG(Z)              &kp LG(X)                  &kp LG(C)                  &kp LG(V)                          &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp LC(LEFT)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
-                                                                                        &trans                     &trans                             &adv_lt 3 ESCAPE        &trans                 &trans        &trans
+&kp TAB      &kp LG(E)              &kp LG(Q)                  &kp LG(W)                  &kp LG(R)                          &kp LG(LS(T))           &trans                 &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LG(L)
+&browsertab  &s_shift LEFT_SHIFT 0  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp LG(F)               &kp LS(LG(R))          &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT      &kp F2
+&trans       &kp LG(Z)              &kp LG(X)                  &kp LG(C)                  &kp LG(V)                          &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp HOME            &kp PAGE_DOWN       &kp PAGE_UP       &kp END        &trans
+                                                               &trans                     &trans                             &trans                  &adv_lt 3 ENTER        &trans              &trans
             >;
         };
 
@@ -334,10 +279,10 @@
 
         Fun {
             bindings = <
-&trans  &trans                         &trans                     &trans                     &trans                             &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &sk_mod LEFT_SHIFT LEFT_SHIFT  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &trans                         &trans                     &trans                     &trans                             &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                                                                  &trans                     &trans                             &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "Fun";
