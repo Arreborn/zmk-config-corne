@@ -280,7 +280,7 @@
             bindings = <
 &kp TAB                            &kp B  &kp L  &kp P                      &kp M      &kp X               &kp LS(LG(S))    &kp F      &kp O                        &kp U     &kp J     &kp LG(SPACE)
 &s_shift_td                        &kp D  &kp R  &kp T                      &kp S      &kp V               &kp Y            &kp N      &kp A                        &kp E     &kp I     &mt RIGHT_SHIFT SLASH
-&sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G  &kp W  &kp K                      &kp C      &kp Q               &kp Z            &kp H      &kp SQT                      &mod_per  &mod_com  &mt RIGHT_ALT MINUS
+&sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G  &kp W  &kp K                      &kp C      &kp Q               &kp Z            &kp H      &kp SQT                      &mod_com  &mod_per  &mt RIGHT_ALT MINUS
                                                  &sk_mod LEFT_GUI LEFT_GUI  &ctrl_del  &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab  &sk_mod RIGHT_GUI RIGHT_GUI
             >;
         };
