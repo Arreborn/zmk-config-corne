@@ -178,7 +178,7 @@
             bindings = <&bracket>, <&para>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
