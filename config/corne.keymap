@@ -35,7 +35,7 @@
         ctrl_tab: ctrl_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_TAB";
-            bindings = <&adv_lt 2 SPACE>, <&kp TAB>;
+            bindings = <&adv_lt 3 SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
