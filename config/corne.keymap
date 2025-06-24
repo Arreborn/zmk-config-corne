@@ -9,6 +9,8 @@
 
 &sk { release-after-ms = <1500>; };
 
+&mt { flavor = "balanced"; };
+
 / {
     behaviors {
         para: para {
@@ -35,7 +37,7 @@
         ctrl_tab: ctrl_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_TAB";
-            bindings = <&adv_lt 3 SPACE>, <&kp TAB>;
+            bindings = <&adv_lt 2 SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -79,18 +81,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        adv_repeat: adv_repeat {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ADV_REPEAT";
-            bindings = <&kp>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <60>;
-            require-prior-idle-ms = <60>;
-            flavor = "tap-preferred";
         };
 
         shift_para: shift_para {
@@ -165,44 +155,6 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        hml: home_row_mod_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <260>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <16 15 14 13>;
-        };
-
-        hmr: home_row_mod_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <260>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <41>;
-        };
-
-        quick_tap: quick_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "QUICK_TAP";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            quick-tap-ms = <70>;
-            require-prior-idle-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         layer_tap: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP";
@@ -232,34 +184,6 @@
                 <&kp TAB>,
                 <&macro_release>,
                 <&kp LCTRL>;
-        };
-
-        per_auto: per_auto {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp SPACE &sk LEFT_SHIFT>;
-            label = "PER_AUTO";
-        };
-
-        com_auto: com_auto {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA &kp SPACE>;
-            label = "COM_AUTO";
-        };
-
-        exl_auto: exl_auto {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EXCLAMATION &kp SPACE &sk LEFT_SHIFT>;
-            label = "EXL_AUTO";
-        };
-
-        ques_auto: ques_auto {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp QUESTION &kp SPACE &sk LEFT_SHIFT>;
-            label = "QUES_AUTO";
         };
 
         sci_ho: sci_ho {
@@ -337,11 +261,6 @@
             bindings = <&inner_word>;
             key-positions = <23 22>;
         };
-
-        shift_layer {
-            bindings = <&sl 0>;
-            key-positions = <37 40>;
-        };
     };
 
     //
@@ -359,10 +278,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                            &kp B  &kp L  &kp P        &kp M             &kp X        &kp LS(LG(S))  &kp F            &kp O                        &kp U     &kp J     &kp LG(SPACE)
-&s_shift_td                        &kp D  &kp R  &kp T        &kp S             &kp V        &kp Y          &kp N            &kp A                        &kp E     &kp I     &mt RIGHT_SHIFT SLASH
-&sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G  &kp W  &kp K        &kp C             &kp Q        &kp Z          &kp H            &kp SQT                      &mod_per  &mod_com  &mt RIGHT_ALT MINUS
-                                                 &key_repeat  &adv_lt 2 ESCAPE  &ctrl_del    &ctrl_tab      &adv_lt 1 ENTER  &sk_mod RIGHT_GUI RIGHT_GUI
+&kp TAB                            &kp B  &kp L  &kp P                      &kp M      &kp X               &kp LS(LG(S))    &kp F      &kp O                        &kp U     &kp J     &kp LG(SPACE)
+&s_shift_td                        &kp D  &kp R  &kp T                      &kp S      &kp V               &kp Y            &kp N      &kp A                        &kp E     &kp I     &mt RIGHT_SHIFT SLASH
+&sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G  &kp W  &kp K                      &kp C      &kp Q               &kp Z            &kp H      &kp SQT                      &mod_per  &mod_com  &mt RIGHT_ALT MINUS
+                                                 &sk_mod LEFT_GUI LEFT_GUI  &ctrl_del  &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab  &sk_mod RIGHT_GUI RIGHT_GUI
             >;
         };
 
@@ -376,27 +295,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none      &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT       &kp NON_US_BACKSLASH    &kp NUMBER_6    &kp N7        &kp N8        &kp N9        &kp N0       &trans
-&trans  &kp LC(A)  &kp EXCLAMATION  &kp EQUAL         &kp PLUS          &kp MINUS               &shift_para     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0       &kp LEFT_GUI
-&trans  &kp LC(X)  &kp PIPE         &kp LESS_THAN     &kp ASTERISK      &kp SLASH               &shift_bracket  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &key_repeat  &trans
-                                    &layer_tap 6 6    &adv_lt 4 ESCAPE  &trans                  &trans          &trans        &trans
-            >;
-        };
-
-        SYM {
-            display-name = "Sym";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &kp EXCL    &kp AT           &kp HASH      &kp DLLR      &kp PRCNT    &kp CARET       &kp AMPS         &kp ASTRK     &kp LEFT_PARENTHESIS  &kp RPAR   &kp QUESTION
-&trans  &gt_lt_tap  &kp EXCLAMATION  &kp QUESTION  &kp PLUS      &kp MINUS    &shift_para     &kp EQUAL        &shift_brace  &shift_angle          &kp GRAVE  &trans
-&trans  &kp PIPE    &exl_auto        &ques_auto    &kp ASTERISK  &kp SLASH    &shift_bracket  &key_repeat      &trans        &mod_per              &mod_com   &kp BACKSLASH
-                                     &trans        &trans        &trans       &trans          &adv_lt 4 ENTER  &trans
+&trans          &none      &kp AMPERSAND    &shift_angle  &kp PERCENT   &kp NON_US_BACKSLASH    &shift_bracket  &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
+&trans          &kp LC(A)  &kp EXCLAMATION  &kp EQUAL     &kp PLUS      &kp MINUS               &shift_brace    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
+&layer_tap 4 4  &kp LC(X)  &kp PIPE         &gt_lt_tap    &kp ASTERISK  &kp SLASH               &shift_para     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+                                            &trans        &trans        &adv_lt 3 ESCAPE        &trans          &trans        &trans
             >;
         };
 
@@ -419,17 +321,6 @@
             >;
 
             label = "Conf";
-        };
-
-        Mini-nav {
-            bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &trans  &trans          &trans          &trans        &trans     &trans
-&trans  &trans        &trans        &trans        &trans        &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &trans        &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans        &trans     &trans
-                                    &trans        &trans        &trans    &trans  &trans          &trans
-            >;
-
-            label = "Mini";
         };
 
         Fun {
