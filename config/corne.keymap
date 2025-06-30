@@ -104,7 +104,7 @@
         para_l: para_l {
             compatible = "zmk,behavior-mod-morph";
             label = "PARA_L";
-            bindings = <&kp LEFT_BRACKET>, <&kp LEFT_PARENTHESIS>;
+            bindings = <&shift_para>, <&kp LEFT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -113,7 +113,7 @@
         para_r: para_r {
             compatible = "zmk,behavior-mod-morph";
             label = "PARA_R";
-            bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_PARENTHESIS>;
+            bindings = <&shift_para_r>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -124,6 +124,24 @@
             label = "PARA_TAP";
             #binding-cells = <0>;
             bindings = <&para_l>, <&para_r>;
+        };
+
+        shift_para: shift_para {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_PARA";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        shift_para_r: shift_para_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_PARA_R";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -259,7 +277,7 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&kp TAB      &kp LG(E)              &kp LG(Q)                  &kp LG(W)                  &kp LG(R)                          &kp LG(LS(T))           &trans                 &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LG(L)
+&trans       &kp LG(E)              &kp LG(Q)                  &kp LG(W)                  &kp LG(R)                          &kp LG(LS(T))           &trans                 &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LG(L)
 &browsertab  &s_shift LEFT_SHIFT 0  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp LG(F)               &kp LS(LG(R))          &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT      &kp F2
 &trans       &kp LG(Z)              &kp LG(X)                  &kp LG(C)                  &kp LG(V)                          &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp HOME            &kp PAGE_DOWN       &kp PAGE_UP       &kp END        &trans
                                                                &trans                     &trans                             &trans                  &adv_lt 3 ENTER        &trans              &trans
@@ -268,7 +286,7 @@
 
         Configure {
             bindings = <
-&kp TAB         &kp C_BRI_UP       &kp LC(LA(LG(N8)))    &kp LC(LS(LG(P)))     &kp LG(LC(LS(M)))         &kp C_VOLUME_UP      &kp C_NEXT  &kp LC(LS(LEFT))  &kp LC(DOWN)       &kp LC(UP_ARROW)       &kp LS(LC(RIGHT))  &kp LG(SPACE)
+&trans          &kp C_BRI_UP       &kp LC(LA(LG(N8)))    &kp LC(LS(LG(P)))     &kp LG(LC(LS(M)))         &kp C_VOLUME_UP      &kp C_NEXT  &kp LC(LS(LEFT))  &kp LC(DOWN)       &kp LC(UP_ARROW)       &kp LS(LC(RIGHT))  &kp LG(SPACE)
 &kp ESCAPE      &kp LC(LS(LG(D)))  &kp LG(LS(LC(R)))     &kp LG(LS(LC(T)))     &kp LS(LG(LC(S)))         &kp K_MUTE           &kp C_PP    &kp LS(LG(LEFT))  &kp LG(LS(SPACE))  &kp LC(LA(LG(SPACE)))  &kp LS(LG(RIGHT))  &kp LC(LS(LG(SLASH)))
 &studio_unlock  &kp C_BRI_DN       &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &kp LG(LC(LS(NUMBER_4)))  &kp C_VOLUME_DOWN    &kp C_PREV  &kp F16           &kp F17            &kp F18                &kp LG(M)          &bootloader
                                                          &none                 &none                     &trans               &trans      &none             &none
