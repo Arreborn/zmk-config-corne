@@ -253,7 +253,7 @@
 &kp TAB                            &kp B  &kp L  &kp P                      &kp M      &kp X               &para_tap        &kp F      &kp O                        &kp U     &kp J     &kp LG(LS(S))
 &s_shift_td                        &kp D  &kp R  &kp T                      &kp S      &kp V               &kp Y            &kp N      &kp A                        &kp E     &kp I     &mt RIGHT_SHIFT SLASH
 &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G  &kp W  &kp K                      &kp C      &kp Q               &kp Z            &kp H      &kp SQT                      &mod_com  &mod_per  &mt RIGHT_ALT MINUS
-                                                 &sk_mod LEFT_GUI LEFT_GUI  &ctrl_del  &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab  &sk_mod RIGHT_GUI RIGHT_GUI
+                                                 &sk_mod LEFT_GUI LEFT_GUI  &ctrl_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &ctrl_tab  &sk_mod RIGHT_GUI RIGHT_GUI
             >;
         };
 
@@ -267,10 +267,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none      &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp NON_US_BACKSLASH    &trans          &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
-&trans  &kp LC(A)  &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS               &layer_tap 4 4  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
-&trans  &kp LC(X)  &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH               &kp LG(LS(E))   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                                    &trans            &trans        &adv_lt 3 ESCAPE        &trans          &trans        &trans
+&trans  &none      &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp NON_US_BACKSLASH    &trans           &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
+&trans  &kp LC(A)  &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS               &layer_tap 4 4   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
+&trans  &kp LC(X)  &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH               &kp LG(LS(E))    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+                                    &trans            &trans        &adv_lt 3 ESCAPE        &adv_lt 3 ENTER  &trans        &trans
             >;
         };
 
@@ -280,7 +280,7 @@
 &trans       &kp LG(E)              &kp LG(Q)                  &kp LG(W)                  &kp LG(R)                          &kp LG(LS(T))           &trans                 &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LG(L)
 &browsertab  &s_shift LEFT_SHIFT 0  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp LG(F)               &kp LS(LG(R))          &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT      &kp F2
 &trans       &kp LG(Z)              &kp LG(X)                  &kp LG(C)                  &kp LG(V)                          &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp HOME            &kp PAGE_DOWN       &kp PAGE_UP       &kp END        &trans
-                                                               &trans                     &trans                             &trans                  &adv_lt 3 ENTER        &trans              &trans
+                                                               &trans                     &trans                             &adv_lt 3 ESCAPE        &trans                 &trans              &trans
             >;
         };
 
