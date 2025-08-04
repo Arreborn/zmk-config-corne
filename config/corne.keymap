@@ -16,7 +16,7 @@
         ctrl_tab: ctrl_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_TAB";
-            bindings = <&kp SPACE>, <&kp TAB>;
+            bindings = <&space_mod>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -68,7 +68,7 @@
             bindings = <&kp>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <90>;
+            tapping-term-ms = <140>;
             flavor = "tap-preferred";
         };
 
@@ -142,6 +142,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        space_mod: space_mod {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_MOD";
+            bindings = <&kp SPACE>, <&kp UNDERSCORE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
