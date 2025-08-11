@@ -210,39 +210,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        sym_8 {
-            bindings = <&kp RA(U)>;
-            key-positions = <8 20>;
-        };
-
-        alt-a {
-            bindings = <&kp RA(A)>;
-            key-positions = <20 32>;
-        };
-
-        sci-ho {
-            bindings = <&sci_ho>;
-            key-positions = <19 31>;
-        };
-
-        sci-sp {
-            bindings = <&sci_sp>;
-            key-positions = <16 4>;
-        };
-
-        sci-sc {
-            bindings = <&sci_sc>;
-            key-positions = <16 28>;
-        };
-
-        iw {
-            bindings = <&inner_word>;
-            key-positions = <23 22>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     //
 
@@ -259,7 +227,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                            &kp B  &kp L  &kp P              &kp M      &kp X               &para_tap        &kp F      &kp O                &kp U     &kp J     &kp LG(LS(S))
+&kp TAB                            &kp B  &kp L  &kp P              &kp M      &kp X               &para_tap        &kp F      &kp O                &kp U     &kp J     &kp LA(U)
 &s_shift_td                        &kp D  &kp R  &kp T              &kp S      &kp V               &kp Y            &kp N      &kp A                &kp E     &kp I     &mt RIGHT_SHIFT SLASH
 &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G  &kp W  &kp K              &kp C      &kp Q               &kp Z            &kp H      &kp SQT              &mod_com  &mod_per  &mt RIGHT_ALT MINUS
                                                  &mt LEFT_GUI LEFT  &ctrl_del  &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab  &mt RIGHT_GUI RIGHT
@@ -279,17 +247,17 @@
 &trans  &none      &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp NON_US_BACKSLASH    &trans          &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
 &trans  &kp LC(A)  &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS               &layer_tap 4 4  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
 &trans  &kp LC(X)  &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH               &kp LG(LS(E))   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                                    &trans            &trans        &adv_lt 3 ESCAPE        &trans          &trans        &trans
+                                    &trans            &trans        &trans                  &trans          &trans        &trans
             >;
         };
 
         NAV {
             display-name = "Nav";
             bindings = <
-&trans       &kp LG(E)              &kp LG(Q)                  &kp LG(W)                  &kp LG(R)                          &kp LG(LS(T))           &trans                 &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LG(L)
+&trans       &kp LG(E)              &kp LG(Q)                  &kp LG(W)                  &kp LG(R)                          &kp LG(LS(T))           &kp LS(LG(S))          &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LG(L)
 &browsertab  &s_shift LEFT_SHIFT 0  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp LG(F)               &kp LS(LG(R))          &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT      &kp F2
 &trans       &kp LG(Z)              &kp LG(X)                  &kp LG(C)                  &kp LG(V)                          &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp HOME            &kp PAGE_DOWN       &kp PAGE_UP       &kp END        &trans
-                                                               &trans                     &trans                             &trans                  &adv_lt 3 ENTER        &trans              &trans
+                                                               &trans                     &trans                             &trans                  &trans                 &trans              &trans
             >;
         };
 
@@ -316,5 +284,12 @@
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        conf {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 };
