@@ -147,7 +147,7 @@
         space_mod: space_mod {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_MOD";
-            bindings = <&kp SPACE>, <&kp UNDERSCORE>;
+            bindings = <&space_mod_2>, <&kp UNDERSCORE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -160,6 +160,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        space_mod_2: space_mod_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_MOD_2";
+            bindings = <&kp SPACE>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
@@ -174,34 +183,6 @@
                 <&kp TAB>,
                 <&macro_release>,
                 <&kp LCTRL>;
-        };
-
-        sci_ho: sci_ho {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp H &kp O>;
-            label = "SCI_HO";
-        };
-
-        sci_sp: sci_sp {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp S &kp M>;
-            label = "SCI_SP";
-        };
-
-        sci_sc: sci_sc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp S &kp C>;
-            label = "SCI_SC";
-        };
-
-        inner_word: inner_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp I &kp W>;
-            label = "INNER_WORD";
         };
 
         lte: lte {
@@ -253,9 +234,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none               &kp AMPERSAND             &kp GREATER_THAN  &kp PERCENT           &kp NON_US_BACKSLASH    &trans          &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
+&trans  &none               &kp AMPERSAND             &kp LESS_THAN     &kp PERCENT           &kp NON_US_BACKSLASH    &trans          &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
 &trans  &mt LEFT_GUI LC(A)  &mt LEFT_ALT EXCLAMATION  &mt LCTRL PLUS    &mt LEFT_SHIFT EQUAL  &kp MINUS               &layer_tap 4 4  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
-&trans  &kp LC(X)           &kp PIPE                  &kp LESS_THAN     &kp ASTERISK          &kp SLASH               &kp LG(LS(E))   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+&trans  &kp LC(X)           &kp PIPE                  &kp GREATER_THAN  &kp ASTERISK          &kp SLASH               &kp LG(LS(E))   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
                                                       &trans            &trans                &trans                  &trans          &trans        &trans
             >;
         };
