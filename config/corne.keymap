@@ -281,10 +281,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none      &kp AMPERSAND    &kp GREATER_THAN  &kp PERCENT   &kp NON_US_BACKSLASH    &trans          &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
-&trans  &kp LC(A)  &kp EXCLAMATION  &kp EQUAL         &kp PLUS      &kp MINUS               &layer_tap 4 4  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
-&trans  &kp LC(X)  &kp PIPE         &kp LESS_THAN     &kp ASTERISK  &kp SLASH               &kp LG(LS(E))   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                                    &trans            &trans        &trans                  &trans          &trans        &trans
+&trans  &none                  &kp AMPERSAND                &kp GREATER_THAN   &kp PERCENT              &kp NON_US_BACKSLASH    &trans          &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
+&trans  &hrm_l LEFT_GUI LC(A)  &hrm_l LEFT_ALT EXCLAMATION  &hrm_l LCTRL PLUS  &hrm_l LEFT_SHIFT EQUAL  &kp MINUS               &layer_tap 4 4  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
+&trans  &kp LC(X)              &kp PIPE                     &kp LESS_THAN      &kp ASTERISK             &kp SLASH               &kp LG(LS(E))   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+                                                            &trans             &trans                   &trans                  &trans          &trans        &trans
             >;
         };
 
