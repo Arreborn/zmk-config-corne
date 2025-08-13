@@ -150,7 +150,16 @@
             bindings = <&kp SPACE>, <&kp UNDERSCORE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        swe_helper: swe_helper {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SWE_HELPER";
+            bindings = <&kp A>, <&kp LA(A)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
@@ -228,9 +237,9 @@
 
             bindings = <
 &kp TAB                            &kp B  &kp L  &kp P              &kp M      &kp X               &para_tap        &kp F      &kp O                &kp U     &kp J     &kp LA(U)
-&s_shift_td                        &kp D  &kp R  &kp T              &kp S      &kp V               &kp Y            &kp N      &kp A                &kp E     &kp I     &mt RIGHT_SHIFT SLASH
+&s_shift_td                        &kp D  &kp R  &kp T              &kp S      &kp V               &kp Y            &kp N      &swe_helper          &kp E     &kp I     &mt RIGHT_SHIFT SLASH
 &sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G  &kp W  &kp K              &kp C      &kp Q               &kp Z            &kp H      &kp SQT              &mod_com  &mod_per  &mt RIGHT_ALT MINUS
-                                                 &mt LEFT_GUI LEFT  &ctrl_del  &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab  &mt RIGHT_GUI RIGHT
+                                                 &mt LEFT_GUI LEFT  &ctrl_del  &adv_lt 1 ESCAPE    &adv_lt 2 ENTER  &ctrl_tab  &mt RIGHT_GUI RIGHT
             >;
         };
 
