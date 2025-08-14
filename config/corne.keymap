@@ -184,20 +184,6 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
-
-        lte: lte {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LT &kp EQUAL>;
-            label = "LTE";
-        };
-
-        gte: gte {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GT &kp EQUAL>;
-            label = "GTE";
-        };
     };
 
     combos { compatible = "zmk,combos"; };
