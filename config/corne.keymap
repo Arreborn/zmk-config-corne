@@ -244,10 +244,10 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&trans       &kp LG(E)                  &kp LG(Q)                  &kp LG(W)            &kp LG(R)              &kp LG(LS(T))           &kp LS(LG(S))          &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LG(L)
-&browsertab  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LCTRL LCTRL  &s_shift LEFT_SHIFT 0  &kp LG(F)               &kp LS(LG(R))          &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT      &kp F2
-&trans       &kp LG(Z)                  &kp LG(X)                  &kp LG(C)            &kp LG(V)              &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp HOME            &kp PAGE_DOWN       &kp PAGE_UP       &kp END        &trans
-                                                                   &trans               &trans                 &trans                  &trans                 &trans              &trans
+&trans       &trans                     &trans                     &trans               &trans                         &trans                  &kp LS(LG(S))          &kp LG(C)  &kp LG(V)       &kp LG(X)     &kp LG(Z)  &kp LG(LS(S))
+&browsertab  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LCTRL LCTRL  &sk_mod LEFT_SHIFT LEFT_SHIFT  &trans                  &kp LS(LG(R))          &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F2
+&trans       &trans                     &trans                     &trans               &trans                         &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans
+                                                                   &trans               &trans                         &trans                  &trans                 &trans     &trans
             >;
         };
 
