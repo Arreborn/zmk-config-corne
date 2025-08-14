@@ -81,16 +81,6 @@
             tapping-term-ms = <180>;
         };
 
-        s_shift: s_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "S_SHIFT";
-            bindings = <&kp>, <&s_shift_td>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         layer_tap: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP";
@@ -124,6 +114,8 @@
             label = "PARA_TAP";
             #binding-cells = <0>;
             bindings = <&para_l>, <&para_r>;
+
+            tapping-term-ms = <150>;
         };
 
         shift_para: shift_para {
@@ -186,7 +178,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        uml {
+            bindings = <&kp LA(U)>;
+            key-positions = <8 20>;
+        };
+    };
 
     //
 
