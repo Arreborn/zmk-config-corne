@@ -9,7 +9,10 @@
 
 &sk { release-after-ms = <1500>; };
 
-&mt { flavor = "balanced"; };
+&mt {
+    flavor = "balanced";
+    tapping-term-ms = <175>;
+};
 
 / {
     behaviors {
