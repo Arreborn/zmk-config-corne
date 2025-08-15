@@ -157,10 +157,19 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
+        squot_h1: squot_h1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SQUOT_H1";
+            bindings = <&kp SQT>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
         super_quote: super_quote {
             compatible = "zmk,behavior-mod-morph";
             label = "SUPER_QUOTE";
-            bindings = <&kp SQT>, <&kp GRAVE>;
+            bindings = <&squot_h1>, <&kp RA(E)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -190,7 +199,7 @@
         };
 
         swehelp {
-            bindings = <&kp LA(A)>;
+            bindings = <&kp RA(A)>;
             key-positions = <20 21>;
         };
     };
@@ -210,9 +219,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                            &kp B           &kp L           &kp P              &kp M             &kp X               &para_tap        &kp F              &kp O                &kp U           &kp J            &kp LA(U)
-&s_shift_td                        &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T        &mt LEFT_SHIFT S  &kp V               &kp Y            &mt RIGHT_SHIFT N  &mt RCTRL A          &mt LEFT_ALT E  &mt RIGHT_GUI I  &excl_morph
-&sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G           &kp W           &kp K              &kp C             &kp Q               &kp Z            &kp H              &super_quote         &mod_com        &mod_per         &mt RIGHT_ALT MINUS
+&kp TAB                            &kp B           &kp L           &kp P              &kp M             &kp X               &para_tap        &kp F              &kp O                &kp U            &kp J            &kp LA(U)
+&s_shift_td                        &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T        &mt LEFT_SHIFT S  &kp V               &kp Y            &mt RIGHT_SHIFT N  &mt RCTRL A          &mt RIGHT_ALT E  &mt RIGHT_GUI I  &excl_morph
+&sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G           &kp W           &kp K              &kp C             &kp Q               &kp Z            &kp H              &super_quote         &mod_com         &mod_per         &mt RIGHT_ALT MINUS
                                                                    &mt LEFT_GUI LEFT  &ctrl_del         &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab          &mt RIGHT_GUI RIGHT
             >;
         };
