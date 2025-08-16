@@ -174,6 +174,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
+
+        dec: dec {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DEC";
+            bindings = <&kp MINUS>, <&kp LC(X)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        inc: inc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "INC";
+            bindings = <&mt RCTRL PLUS>, <&mt LCTRL LC(X)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     macros {
@@ -236,10 +254,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none               &kp AMPERSAND             &kp LESS_THAN     &kp PERCENT           &kp NON_US_BACKSLASH    &trans          &kp N7        &kp N8        &kp N9        &kp QUESTION  &trans
-&trans  &mt LEFT_GUI LC(A)  &mt LEFT_ALT EXCLAMATION  &mt LCTRL PLUS    &mt LEFT_SHIFT EQUAL  &kp MINUS               &layer_tap 4 4  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0        &kp GRAVE
-&trans  &kp LC(X)           &kp PIPE                  &kp GREATER_THAN  &kp ASTERISK          &kp SLASH               &kp LG(LS(E))   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                                                      &trans            &trans                &trans                  &trans          &trans        &trans
+&trans          &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3   &kp NUMBER_4          &kp N5       &kp NUMBER_6   &kp N7                    &kp N8        &kp N9                  &kp N0            &kp MINUS
+&trans          &mt LEFT_GUI AMPERSAND  &mt LEFT_ALT LESS_THAN  &inc           &mt LEFT_SHIFT EQUAL  &dec         &para_tap      &mt RIGHT_SHIFT NUMBER_4  &mt RCTRL N5  &mt RIGHT_ALT NUMBER_6  &mt RIGHT_GUI N0  &kp TILDE
+&layer_tap 4 4  &kp PIPE                &kp GREATER_THAN        &kp BACKSLASH  &kp ASTERISK          &kp SLASH    &kp LG(LS(E))  &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3            &trans            &trans
+                                                                &trans         &trans                &trans       &trans         &trans                    &trans
             >;
         };
 
