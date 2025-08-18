@@ -239,9 +239,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                            &kp B           &kp L           &kp P              &kp M             &kp X               &para_tap        &kp F              &kp O                &kp U            &kp J            &kp LA(U)
-&s_shift_td                        &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T        &mt LEFT_SHIFT S  &kp V               &kp Y            &mt RIGHT_SHIFT N  &mt RCTRL A          &mt RIGHT_ALT E  &mt RIGHT_GUI I  &excl_morph
-&sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G           &kp W           &kp K              &kp C             &kp Q               &kp Z            &kp H              &super_quote         &mod_com         &mod_per         &mt RIGHT_ALT MINUS
+&kp TAB                            &kp B           &kp L           &kp P              &kp M             &kp X               &para_tap        &kp F              &kp O                &kp U           &kp J            &kp LA(U)
+&s_shift_td                        &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T        &mt LEFT_SHIFT S  &kp V               &kp Y            &mt RIGHT_SHIFT N  &mt RCTRL A          &mt LEFT_ALT E  &mt RIGHT_GUI I  &excl_morph
+&sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G           &kp W           &kp K              &kp C             &kp Q               &kp Z            &kp H              &super_quote         &mod_com        &mod_per         &mt RIGHT_ALT MINUS
                                                                    &mt LEFT_GUI LEFT  &ctrl_del         &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab          &mt RIGHT_GUI RIGHT
             >;
         };
@@ -266,10 +266,10 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&trans       &trans                     &trans                     &trans               &trans                         &trans                  &kp LS(LG(S))          &kp LG(C)  &kp LG(V)       &kp LG(X)     &kp LG(Z)  &kp LG(LS(S))
-&browsertab  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LCTRL LCTRL  &sk_mod LEFT_SHIFT LEFT_SHIFT  &trans                  &kp LS(LG(R))          &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F2
-&trans       &trans                     &trans                     &trans               &trans                         &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans
-                                                                   &trans               &trans                         &trans                  &trans                 &trans     &trans
+&trans  &trans                     &trans                     &trans               &trans                         &trans                  &kp LS(LG(S))          &kp LG(C)  &kp LG(V)       &kp LG(X)     &kp LG(Z)  &kp LG(LS(S))
+&mo 5   &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LCTRL LCTRL  &sk_mod LEFT_SHIFT LEFT_SHIFT  &browsertab             &kp LS(LG(R))          &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F2
+&trans  &trans                     &trans                     &trans               &trans                         &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans
+                                                              &trans               &trans                         &trans                  &trans                 &trans     &trans
             >;
         };
 
@@ -293,6 +293,17 @@
             >;
 
             label = "Fun";
+        };
+
+        MiniNum {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "mininum";
         };
     };
 
