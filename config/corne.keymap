@@ -180,7 +180,7 @@
         inc_dec: inc_dec {
             compatible = "zmk,behavior-mod-morph";
             label = "INC_DEC";
-            bindings = <&mt RCTRL A>, <&kp LC(X)>;
+            bindings = <&kp LC(A)>, <&kp LC(X)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
