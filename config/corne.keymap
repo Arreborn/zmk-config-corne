@@ -248,10 +248,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                            &kp B           &kp L           &kp P              &kp M             &kp X               &para_tap        &kp F              &kp O                &kp U           &kp J            &kp LA(U)
-&s_shift_td                        &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T        &mt LEFT_SHIFT S  &kp V               &kp Y            &mt RIGHT_SHIFT N  &mt RCTRL A          &mt LEFT_ALT E  &mt RIGHT_GUI I  &excl_morph
-&sk_mod LEFT_CONTROL LEFT_CONTROL  &kp G           &kp W           &kp K              &kp C             &kp Q               &kp Z            &kp H              &super_quote         &mod_com        &mod_per         &mt RIGHT_ALT MINUS
-                                                                   &mt LEFT_GUI LEFT  &ctrl_del         &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab          &mt RIGHT_GUI RIGHT
+&kp TAB      &kp B           &kp L           &kp P              &kp M             &kp X               &para_tap        &kp F              &kp O                &kp U           &kp J            &kp LS(LG(S))
+&s_shift_td  &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T        &mt LEFT_SHIFT S  &kp V               &kp Y            &mt RIGHT_SHIFT N  &mt RCTRL A          &mt LEFT_ALT E  &mt RIGHT_GUI I  &excl_morph
+&key_repeat  &kp G           &kp W           &kp K              &kp C             &kp Q               &kp Z            &kp H              &super_quote         &mod_com        &mod_per         &kp MINUS
+                                             &mt LEFT_GUI LEFT  &ctrl_del         &adv_lt 2 ESCAPE    &adv_lt 1 ENTER  &ctrl_tab          &mt RIGHT_GUI RIGHT
             >;
         };
 
@@ -265,7 +265,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp BACKSLASH   &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3    &kp NUMBER_4          &kp N5       &kp NUMBER_6   &kp N7                    &kp N8        &kp N9                  &kp N0            &kp MINUS
+&trans          &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3    &kp NUMBER_4          &kp N5       &kp NUMBER_6   &kp N7                    &kp N8        &kp N9                  &kp N0            &kp MINUS
 &trans          &mt LEFT_GUI AMPERSAND  &mt LEFT_ALT LESS_THAN  &mt LCTRL PLUS  &mt LEFT_SHIFT EQUAL  &kp MINUS    &para_tap      &mt RIGHT_SHIFT NUMBER_4  &mt RCTRL N5  &mt RIGHT_ALT NUMBER_6  &mt RIGHT_GUI N0  &trans
 &layer_tap 4 4  &bs_pipe                &kp GREATER_THAN        &kp ASTERISK    &inc_dec              &kp SLASH    &kp LG(LS(E))  &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3            &trans            &trans
                                                                 &trans          &trans                &trans       &trans         &trans                    &trans
