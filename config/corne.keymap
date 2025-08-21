@@ -10,10 +10,10 @@
 &sk { release-after-ms = <1500>; };
 
 &mt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <175>;
     quick-tap-ms = <150>;
-    require-prior-idle-ms = <30>;
+    require-prior-idle-ms = <75>;
 };
 
 / {
