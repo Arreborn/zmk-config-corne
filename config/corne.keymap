@@ -219,7 +219,7 @@
         adv_lt_ak: adv_lt_ak {
             compatible = "zmk,behavior-hold-tap";
             label = "ADV_LT_AK";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
