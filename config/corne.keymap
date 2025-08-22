@@ -21,7 +21,7 @@
         ctrl_tab: ctrl_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_TAB";
-            bindings = <&space_mod>, <&kp TAB>;
+            bindings = <&space_mod_2>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -261,6 +261,22 @@
 
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
+        };
+
+        space_mod_2: space_mod_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_MOD_2";
+            bindings = <&space_mod>, <&kp ENTER>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        super_shift: super_shift {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SUPER_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&sk_mod LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
         };
     };
 
