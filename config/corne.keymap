@@ -211,7 +211,7 @@
         ak_sp: ak_sp {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp ESC>;
+            bindings = <&ctrl_del>;
 
             akt_sc {
                 trigger-keys = <S>;
@@ -310,7 +310,7 @@
 &kp TAB                &kp B           &kp L           &kp P        &kp M             &kp X             &para_tap       &kp F              &kp O         &kp U           &kp J            &kp LS(LG(S))
 &mt LEFT_SHIFT ESCAPE  &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T  &mt LEFT_SHIFT S  &kp V             &kp Y           &mt RIGHT_SHIFT N  &mt RCTRL A   &mt LEFT_ALT E  &mt RIGHT_GUI I  &excl_morph
 &caps_word             &kp G           &kp W           &kp K        &kp C             &kp Q             &kp Z           &kp H              &super_quote  &mod_com        &mod_per         &kp MINUS
-                                                       &sl 2        &ctrl_del         &adv_lt_ak 2 0    &adv_lt_sp 1 0  &kp ENTER          &sl 1
+                                                       &sl 2        &ak_sp         &adv_lt_ak 2 0    &adv_lt_sp 1 0  &kp ENTER          &sl 1
             >;
         };
 
