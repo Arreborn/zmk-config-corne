@@ -21,7 +21,7 @@
         ctrl_tab: ctrl_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_TAB";
-            bindings = <&space_mod>, <&kp TAB>;
+            bindings = <&space_mod_2>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -262,6 +262,22 @@
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
         };
+
+        space_mod_2: space_mod_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_MOD_2";
+            bindings = <&space_mod>, <&kp ENTER>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        super_shift: super_shift {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SUPER_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&sk_mod LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
+        };
     };
 
     macros {
@@ -307,10 +323,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                &kp B           &kp L           &kp P        &kp M             &kp X             &para_tap       &kp F              &kp O         &kp U           &kp J            &kp LS(LG(S))
-&mt LEFT_SHIFT ESCAPE  &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T  &mt LEFT_SHIFT S  &kp V             &kp Y           &mt RIGHT_SHIFT N  &mt RCTRL A   &mt LEFT_ALT E  &mt RIGHT_GUI I  &excl_morph
-&caps_word             &kp G           &kp W           &kp K        &kp C             &kp Q             &kp Z           &kp H              &super_quote  &mod_com        &mod_per         &kp MINUS
-                                                       &sl 2        &ak_sp         &adv_lt_ak 2 0    &adv_lt_sp 1 0  &kp ENTER          &sl 1
+&kp TAB       &kp B           &kp L           &kp P        &kp M             &kp X             &para_tap       &kp F              &kp O         &kp U           &kp J            &kp LS(LG(S))
+&super_shift  &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T  &mt LEFT_SHIFT S  &kp V             &kp Y           &mt RIGHT_SHIFT N  &mt RCTRL A   &mt LEFT_ALT E  &mt RIGHT_GUI I  &excl_morph
+&caps_word    &kp G           &kp W           &kp K        &kp C             &kp Q             &kp Z           &kp H              &super_quote  &mod_com        &mod_per         &kp MINUS
+                                              &sl 2        &ctrl_del         &adv_lt_ak 2 0    &adv_lt_sp 1 0  &para_tap          &sl 1
             >;
         };
 
