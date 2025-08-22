@@ -211,9 +211,14 @@
         ak_sp: ak_sp {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&ctrl_tab>;
+            bindings = <&kp ESC>;
 
             akt_sc { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp C>; };
+            akt_ji { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
+            akt_wr { trigger-keys = <W>; max-prior-idle-ms = <300>; bindings = <&kp R>; };
+            akt_you { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp O>, <&kp U>; };
+            akt_re { trigger-keys = <SQT>; max-prior-idle-ms = <300>; bindings = <&kp R>, <&kp E>; };
+            akt_gsaiw { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp S>, <&kp A>, <&kp I>, <&kp W>; };
         };
 
         adv_lt_ak: adv_lt_ak {
