@@ -8,6 +8,9 @@
 #define ADJ 3
 #define EXTRA 4
 
+#define HR_TAP_TERM 300
+#define HR_PRIOR_IDLE 45
+
 &sk { release-after-ms = <1500>; };
 
 &mt {
@@ -278,9 +281,9 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <HR_TAP_TERM>;
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <60>;
+            require-prior-idle-ms = <HR_PRIOR_IDLE>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <19 20 21 22>;
         };
