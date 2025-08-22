@@ -295,9 +295,9 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <HR_TAP_TERM>;
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <60>;
+            require-prior-idle-ms = <HR_PRIOR_IDLE>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <13 14 15 16>;
         };
