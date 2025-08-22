@@ -211,7 +211,7 @@
         ak_sp: ak_sp {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&ctrl_tab>;
+            bindings = <&kp ESC>;
 
             akt_sc {
                 trigger-keys = <S>;
