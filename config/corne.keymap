@@ -9,7 +9,7 @@
 #define EXTRA 4
 
 #define HR_TAP_TERM 340
-#define HR_PRIOR_IDLE 40
+#define HR_PRIOR_IDLE 50
 
 &sk { release-after-ms = <1500>; };
 
@@ -280,23 +280,9 @@
             bindings = <&sk_mod LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
         };
 
-        hmr: hmr {
+        hr: hr {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <HR_TAP_TERM>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <HR_PRIOR_IDLE>;
-            // hold-trigger-on-release;
-            // hold-trigger-key-positions = <19 20 21 22>;
-        };
-
-        hml: hml {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+            label = "HR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -307,20 +293,6 @@
             // hold-trigger-on-release;
             // hold-trigger-key-positions = <13 14 15 16>;
         };
-
-        // hr: hr {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "HR";
-        //     bindings = <&kp>, <&kp>;
-        //
-        //     #binding-cells = <2>;
-        //     flavor = "tap-preferred";
-        //     tapping-term-ms = <HR_TAP_TERM>;
-        //     quick-tap-ms = <150>;
-        //     require-prior-idle-ms = <HR_PRIOR_IDLE>;
-        //     // hold-trigger-on-release;
-        //     // hold-trigger-key-positions = <13 14 15 16>;
-        // };
     };
 
     macros {
@@ -365,7 +337,7 @@
 
             bindings = <
 &kp TAB       &kp B            &kp L            &kp P         &kp M              &kp X             &para_tap       &kp F               &kp O         &kp U            &kp J             &kp LS(LG(S))
-&super_shift  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &excl_morph
+&super_shift  &hr LEFT_GUI D  &hr LEFT_ALT R  &hr LCTRL T  &hr LEFT_SHIFT S  &kp V             &kp Y           &hr RIGHT_SHIFT N  &hr RCTRL A  &hr LEFT_ALT E  &hr RIGHT_GUI I  &excl_morph
 &caps_word    &kp G            &kp W            &kp K         &kp C              &kp Q             &kp Z           &kp H               &super_quote  &mod_com         &mod_per          &kp MINUS
                                                 &sl 2         &ctrl_del          &adv_lt_ak 2 0    &adv_lt_sp 1 0  &kp ENTER           &num_word 1
             >;
