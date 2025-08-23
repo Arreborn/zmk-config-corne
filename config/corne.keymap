@@ -7,6 +7,7 @@
 #define SYM 2
 #define ADJ 3
 #define EXTRA 4
+#define HR_PRIOR_IDLE 50
 
 &sk { release-after-ms = <1500>; };
 
@@ -271,13 +272,12 @@
         };
 
         nav_word: nav_word {
-            compatible = "zmk,behavior-auto-layer";
+            aompatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
             continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP HOME END>;
             ignore-modifiers;
         };
     };
- };
 
     macros {
         browsertab: browsertab {
