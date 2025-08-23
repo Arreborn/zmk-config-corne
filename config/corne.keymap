@@ -1,5 +1,4 @@
 #include <behaviors/num_word.dtsi>
-#include <behaviors/unicode.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
@@ -18,7 +17,6 @@
     require-prior-idle-ms = <80>;
 };
 
-&uc { default-mode = <UC_MODE_MACOS>; };
 
 / {
     behaviors {
