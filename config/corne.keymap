@@ -78,7 +78,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <140>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
         };
 
         layer_tap: layer_tap {
@@ -256,7 +256,7 @@
             akt_spc {
                 trigger-keys = <SPC>;
                 max-prior-idle-ms = <300>;
-                bindings = <&sk SHFT>;
+                bindings = <&sk LEFT_SHIFT>;
             };
         };
 
