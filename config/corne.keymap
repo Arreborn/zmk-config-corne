@@ -345,7 +345,7 @@
 &kp TAB                        &kp B           &kp L           &kp P        &kp M             &kp X             &super_quote    &kp F              &kp O        &kp U           &kp J            &kp ENTER
 &sk_mod LEFT_SHIFT LEFT_SHIFT  &mt LEFT_GUI D  &mt LEFT_ALT R  &mt LCTRL T  &mt LEFT_SHIFT S  &kp V             &kp Y           &mt RIGHT_SHIFT N  &mt RCTRL A  &mt LEFT_ALT E  &mt RIGHT_GUI I  &right_shift RIGHT_SHIFT 0
 &num_left 1 1                  &kp G           &kp W           &kp K        &kp C             &kp Q             &kp Z           &kp H              &mod_com     &mod_per        &para_tap        &kp MINUS
-                                                               &nav_word 2  &ctrl_del         &adv_lt_ak 2 0    &adv_lt_sp 1 0  &kp SPACE          &num_word 1
+                                                                   &nav_word 2  &ctrl_del         &adv_lt_ak 2 0    &adv_lt_sp 1 0  &ctrl_tab          &num_word 1
             >;
         };
 
