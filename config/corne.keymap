@@ -232,7 +232,7 @@
                 bindings = <&kp C>;
             };
 
-            akt_ji {
+            akt_ck {
                 trigger-keys = <C>;
                 max-prior-idle-ms = <300>;
                 bindings = <&kp K>;
@@ -244,10 +244,28 @@
                 bindings = <&kp R>;
             };
 
-            akt_you {
+            akt_usqt {
+                trigger-keys = <U>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp SQT>;
+            };
+
+            akt_esqt {
+                trigger-keys = <E>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp SQT>;
+            };
+
+            akt_isqt {
+                trigger-keys = <I>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp SQT>;
+            };
+
+            akt_ysqt {
                 trigger-keys = <Y>;
                 max-prior-idle-ms = <300>;
-                bindings = <&kp O>, <&kp U>;
+                bindings = <&kp SQT>;
             };
 
             akt_re {
