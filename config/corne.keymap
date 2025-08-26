@@ -215,7 +215,7 @@
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&ctrl_tab>;
+            bindings = <&mo>, <&sp_ent>;
 
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
@@ -316,6 +316,15 @@
             tapping-term-ms = <280>;
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
+        };
+
+        sp_ent: sp_ent {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SP_ENT";
+            bindings = <&ctrl_tab>, <&kp ENTER>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
