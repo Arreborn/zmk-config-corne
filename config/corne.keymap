@@ -244,29 +244,34 @@
                 bindings = <&kp R>;
             };
 
-            akt_usqt {
-                trigger-keys = <U>;
+            akt_sqt {
+                trigger-keys = <Y U E I>;
                 max-prior-idle-ms = <300>;
                 bindings = <&kp SQT>;
             };
-
-            akt_esqt {
-                trigger-keys = <E>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp SQT>;
-            };
-
-            akt_isqt {
-                trigger-keys = <I>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp SQT>;
-            };
-
-            akt_ysqt {
-                trigger-keys = <Y>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp SQT>;
-            };
+            // akt_usqt {
+            //     trigger-keys = <U>;
+            //     max-prior-idle-ms = <300>;
+            //     bindings = <&kp SQT>;
+            // };
+            //
+            // akt_esqt {
+            //     trigger-keys = <E>;
+            //     max-prior-idle-ms = <300>;
+            //     bindings = <&kp SQT>;
+            // };
+            //
+            // akt_isqt {
+            //     trigger-keys = <I>;
+            //     max-prior-idle-ms = <300>;
+            //     bindings = <&kp SQT>;
+            // };
+            //
+            // akt_ysqt {
+            //     trigger-keys = <Y>;
+            //     max-prior-idle-ms = <300>;
+            //     bindings = <&kp SQT>;
+            // };
 
             akt_re {
                 trigger-keys = <SQT>;
@@ -281,10 +286,16 @@
             };
 
             akt_spc {
-                trigger-keys = <SPC>;
+                trigger-keys = <SPC ENTER>;
                 max-prior-idle-ms = <300>;
                 bindings = <&sk LEFT_SHIFT>;
             };
+
+            // akt_ent {
+            //     trigger-keys = <ENTER>;
+            //     max-prior-idle-ms = <300>;
+            //     bindings = <&sk LEFT_SHIFT>;
+            // };
         };
 
         adv_lt_ak: adv_lt_ak {
