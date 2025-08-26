@@ -58,10 +58,9 @@
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&num_word>, <&mo>;
+            bindings = <&mo>, <&num_word>;
 
             quick-tap-ms = <100>;
-            require-prior-idle-ms = <75>;
         };
 
         mod_com: mod_com {
