@@ -327,6 +327,11 @@
             bindings = <&kp RA(A)>;
             key-positions = <20 21>;
         };
+
+        eql {
+            bindings = <&kp EQUAL>;
+            key-positions = <16 15>;
+        };
     };
 
     keymap {
