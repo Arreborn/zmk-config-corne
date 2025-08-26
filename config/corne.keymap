@@ -357,11 +357,6 @@
             key-positions = <20 21>;
         };
 
-        ent {
-            bindings = <&kp ENTER>;
-            key-positions = <39 40>;
-        };
-
         eql {
             bindings = <&kp EQUAL>;
             key-positions = <16 15>;
