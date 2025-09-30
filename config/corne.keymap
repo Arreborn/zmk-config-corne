@@ -245,7 +245,7 @@
             };
 
             akt_sqt {
-                trigger-keys = <Y U E I>;
+                trigger-keys = <Y U E I N>;
                 max-prior-idle-ms = <300>;
                 bindings = <&kp SQT>;
             };
