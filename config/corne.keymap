@@ -1,5 +1,6 @@
 #include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define DEF 0
@@ -416,10 +417,10 @@
 
         Configure {
             bindings = <
-&trans          &kp C_BRI_UP       &kp LC(LA(LG(N8)))    &kp LC(LS(LG(P)))     &kp LG(LC(LS(M)))         &kp C_VOLUME_UP      &kp C_NEXT  &kp LC(LS(LEFT))  &kp LC(DOWN)       &kp LC(UP_ARROW)       &kp LS(LC(RIGHT))  &kp LG(SPACE)
-&kp ESCAPE      &kp LC(LS(LG(D)))  &kp LG(LS(LC(R)))     &kp LG(LS(LC(T)))     &kp LS(LG(LC(S)))         &kp K_MUTE           &kp C_PP    &kp LS(LG(LEFT))  &kp LG(LS(SPACE))  &kp LC(LA(LG(SPACE)))  &kp LS(LG(RIGHT))  &kp LC(LS(LG(SLASH)))
-&studio_unlock  &kp C_BRI_DN       &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &kp LG(LC(LS(NUMBER_4)))  &kp C_VOLUME_DOWN    &kp C_PREV  &kp F16           &kp F17            &kp F18                &kp LG(M)          &bootloader
-                                                         &none                 &none                     &trans               &trans      &none             &none
+&bt BT_SEL 0  &kp C_BRI_UP       &kp LC(LA(LG(N8)))    &kp LC(LS(LG(P)))     &kp LG(LC(LS(M)))         &kp C_VOLUME_UP      &kp C_NEXT  &kp LC(LS(LEFT))  &kp LC(DOWN)       &kp LC(UP_ARROW)       &kp LS(LC(RIGHT))  &kp LG(SPACE)
+&kp ESCAPE    &kp LC(LS(LG(D)))  &kp LG(LS(LC(R)))     &kp LG(LS(LC(T)))     &kp LS(LG(LC(S)))         &kp K_MUTE           &kp C_PP    &kp LS(LG(LEFT))  &kp LG(LS(SPACE))  &kp LC(LA(LG(SPACE)))  &kp LS(LG(RIGHT))  &kp LC(LS(LG(SLASH)))
+&bt BT_SEL 1  &kp C_BRI_DN       &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &kp LG(LC(LS(NUMBER_4)))  &kp C_VOLUME_DOWN    &kp C_PREV  &kp F16           &kp F17            &kp F18                &kp LG(M)          &bootloader
+                                                       &none                 &none                     &trans               &trans      &none             &none
             >;
 
             label = "Conf";
