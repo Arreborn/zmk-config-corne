@@ -239,12 +239,6 @@
                 bindings = <&kp R>, <&kp E>;
             };
 
-            akt_gsaiw {
-                trigger-keys = <G>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp S>, <&kp A>, <&kp I>, <&kp W>;
-            };
-
             akt_spc {
                 trigger-keys = <SPC ENTER>;
                 max-prior-idle-ms = <300>;
