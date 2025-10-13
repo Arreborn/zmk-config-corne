@@ -113,7 +113,7 @@
             #binding-cells = <0>;
             bindings = <&para_l>, <&para_r>;
 
-            tapping-term-ms = <230>;
+            tapping-term-ms = <180>;
         };
 
         shift_para: shift_para {
@@ -186,7 +186,7 @@
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&sp_ent>;
+            bindings = <&mo>, <&ctrl_tab>;
 
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
@@ -252,15 +252,6 @@
             #binding-cells = <1>;
             continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP HOME END>;
             ignore-modifiers;
-        };
-
-        sp_ent: sp_ent {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SP_ENT";
-            bindings = <&ctrl_tab>, <&kp ENTER>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         hmr: hmr {
