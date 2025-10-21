@@ -234,14 +234,14 @@
             };
         };
 
-        adv_lt_del: adv_lt_del {
+        adv_lt_ak: adv_lt_ak {
             compatible = "zmk,behavior-hold-tap";
-            label = "ADV_LT_DEL";
+            label = "ADV_LT_AK";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&ctrl_del>;
+            bindings = <&mo>, <&ak_sp>;
 
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
@@ -368,10 +368,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                &kp B            &kp L            &kp P         &kp M              &kp X              &kp Z           &kp F               &kp O         &kp U            &kp J             &kp EQUAL
-&mt LEFT_SHIFT ESCAPE  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V              &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
-&sym_ctrl LCTRL 0      &kp G            &kp W            &kp K         &kp C              &kp Q              &super_quote    &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
-                                                         &nav_word 2   &ctrl_tab          &adv_lt_del 2 0    &adv_lt_sp 1 0  &ak_sp              &num_word 1
+&kp TAB                        &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F               &kp O         &kp U            &kp J             &kp EQUAL
+&sk_mod LEFT_SHIFT LEFT_SHIFT  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
+&sym_ctrl LCTRL 0              &kp G            &kp W            &kp K         &kp C              &kp Q             &ctrl_del       &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
+                                                                 &nav_word 2   &ctrl_tab          &adv_lt_ak 2 0    &adv_lt_sp 1 0  &super_quote        &num_word 1
             >;
         };
 
@@ -396,7 +396,7 @@
             display-name = "Nav";
             bindings = <
 &trans  &trans                     &trans                     &trans               &trans                         &trans                  &kp LS(LG(S))          &kp LG(C)  &kp LG(V)       &kp LG(X)     &kp LG(Z)  &kp LG(LS(S))
-&trans  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LCTRL LCTRL  &sk_mod LEFT_SHIFT LEFT_SHIFT  &browsertab             &kp LS(LG(R))          &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F2
+&trans  &sk_mod LEFT_GUI LEFT_GUI  &sk_mod LEFT_ALT LEFT_ALT  &sk_mod LCTRL LCTRL  &sk_mod LEFT_SHIFT LEFT_SHIFT  &browsertab             &kp F2                 &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
 &mo 5   &trans                     &trans                     &trans               &trans                         &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)  &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans
                                                               &trans               &trans                         &trans                  &trans                 &trans     &trans
             >;
