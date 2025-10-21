@@ -308,13 +308,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-
-        c_word: c_word {
-            compatible = "zmk,behavior-tap-dance";
-            label = "C_WORD";
-            #binding-cells = <0>;
-            bindings = <&sk_mod LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
-        };
     };
 
     macros {
@@ -344,34 +337,9 @@
             key-positions = <20 21>;
         };
 
-        p_l {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <17 16>;
-        };
-
-        b_l {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <4 5>;
-        };
-
-        c_l {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <28 29>;
-        };
-
-        p_r {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <18 19>;
-        };
-
-        b_r {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <6 7>;
-        };
-
-        c_r {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <30 31>;
+        c_word {
+            bindings = <&caps_word>;
+            key-positions = <24 12>;
         };
     };
 
@@ -388,10 +356,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB              &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F               &kp O         &kp U            &kp J             &ctrl_del
-&c_word              &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
-&sk_mod LCTRL LCTRL  &kp G            &kp W            &kp K         &kp C              &kp Q             &super_quote    &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
-                                                       &nav_word 2   &ak_sp             &adv_lt_sp 2 0    &adv_lt_sp 1 0  &ak_sp              &num_word 1
+&kp TAB                        &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F               &kp O         &kp U            &kp J             &para_tap
+&sk_mod LEFT_SHIFT LEFT_SHIFT  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
+&sk_mod LCTRL LCTRL            &kp G            &kp W            &kp K         &kp C              &kp Q             &super_quote    &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
+                                                                 &nav_word 2   &ctrl_del          &adv_lt_sp 2 0    &adv_lt_sp 1 0  &ak_sp              &num_word 1
             >;
         };
 
