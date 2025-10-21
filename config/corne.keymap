@@ -234,14 +234,14 @@
             };
         };
 
-        adv_lt_ak: adv_lt_ak {
+        adv_lt_del: adv_lt_del {
             compatible = "zmk,behavior-hold-tap";
-            label = "ADV_LT_AK";
+            label = "ADV_LT_DEL";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&ak_sp>;
+            bindings = <&mo>, <&ctrl_del>;
 
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
@@ -308,6 +308,18 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
+        sym_ctrl: sym_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SYM_CTRL";
+            bindings = <&kp>, <&sym_com>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <80>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -356,10 +368,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F                            &kp O         &kp U            &kp J             &ctrl_del
-&mt LEFT_SHIFT ESCAPE  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N               &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
-&mt LCTRL EQUAL        &kp G            &kp W            &kp K         &kp C              &kp Q             &super_quote    &kp H                            &tild_slash   &mod_com         &mod_per          &mt RIGHT_ALT MINUS
-                                                         &nav_word 2   &ctrl_del          &adv_lt_sp 2 0    &adv_lt_sp 1 0  &sk_mod RIGHT_SHIFT RIGHT_SHIFT  &num_word 1
+&kp TAB                &kp B            &kp L            &kp P         &kp M              &kp X              &kp Z           &kp F               &kp O         &kp U            &kp J             &kp EQUAL
+&mt LEFT_SHIFT ESCAPE  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V              &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
+&sym_ctrl LCTRL 0      &kp G            &kp W            &kp K         &kp C              &kp Q              &super_quote    &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
+                                                         &nav_word 2   &ctrl_tab          &adv_lt_del 2 0    &adv_lt_sp 1 0  &ak_sp              &num_word 1
             >;
         };
 
@@ -375,7 +387,7 @@
             bindings = <
 &trans          &kp NUMBER_1             &kp NUMBER_2             &kp NUMBER_3     &kp NUMBER_4           &kp N5       &kp NUMBER_6   &kp N7                     &kp N8         &kp N9                   &kp N0             &trans
 &trans          &hml LEFT_GUI AMPERSAND  &hml LEFT_ALT LESS_THAN  &hml LCTRL PLUS  &hml LEFT_SHIFT EQUAL  &kp MINUS    &para_tap      &hmr RIGHT_SHIFT NUMBER_4  &hmr RCTRL N5  &hmr RIGHT_ALT NUMBER_6  &hmr RIGHT_GUI N0  &trans
-&layer_tap 4 4  &bs_pipe                 &kp GREATER_THAN         &kp ASTERISK     &sym_com               &kp SLASH    &kp LG(LS(E))  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3             &trans             &trans
+&layer_tap 4 4  &bs_pipe                 &kp GREATER_THAN         &kp ASTERISK     &sym_com               &kp SLASH    &kp LG(LS(E))  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3             &mod_per           &trans
                                                                   &trans           &trans                 &trans       &trans         &trans                     &trans
             >;
         };
