@@ -391,7 +391,7 @@
 &kp TAB              &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F               &kp O         &kp U            &kp J             &ctrl_del
 &c_word              &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
 &sk_mod LCTRL LCTRL  &kp G            &kp W            &kp K         &kp C              &kp Q             &super_quote    &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
-                                                       &nav_word 2   &kp ESCAPE         &adv_lt_sp 2 0    &adv_lt_sp 1 0  &super_quote        &num_word 1
+                                                       &nav_word 2   &ak_sp             &adv_lt_sp 2 0    &adv_lt_sp 1 0  &ak_sp              &num_word 1
             >;
         };
 
