@@ -356,9 +356,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                        &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F               &kp O         &kp U            &kp J             &para_tap
+&kp TAB                        &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F               &kp O         &kp U            &kp J             &ctrl_tab
 &sk_mod LEFT_SHIFT LEFT_SHIFT  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
-&sk_mod LCTRL LCTRL            &kp G            &kp W            &kp K         &kp C              &kp Q             &super_quote    &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
+&mt LCTRL ESCAPE               &kp G            &kp W            &kp K         &kp C              &kp Q             &super_quote    &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
                                                                  &nav_word 2   &ctrl_del          &adv_lt_sp 2 0    &adv_lt_sp 1 0  &ak_sp              &num_word 1
             >;
         };
@@ -375,7 +375,7 @@
             bindings = <
 &trans          &kp NUMBER_1             &kp NUMBER_2             &kp NUMBER_3     &kp NUMBER_4           &kp N5       &kp NUMBER_6   &kp N7                     &kp N8         &kp N9                   &kp N0             &trans
 &trans          &hml LEFT_GUI AMPERSAND  &hml LEFT_ALT LESS_THAN  &hml LCTRL PLUS  &hml LEFT_SHIFT EQUAL  &kp MINUS    &mod_per       &hmr RIGHT_SHIFT NUMBER_4  &hmr RCTRL N5  &hmr RIGHT_ALT NUMBER_6  &hmr RIGHT_GUI N0  &trans
-&layer_tap 4 4  &bs_pipe                 &kp GREATER_THAN         &kp ASTERISK     &sym_com               &kp SLASH    &kp LG(LS(E))  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3             &trans             &trans
+&layer_tap 4 4  &bs_pipe                 &kp GREATER_THAN         &kp ASTERISK     &sym_com               &kp SLASH    &kp LG(LS(E))  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3             &para_tap          &trans
                                                                   &trans           &trans                 &trans       &trans         &trans                     &trans
             >;
         };
