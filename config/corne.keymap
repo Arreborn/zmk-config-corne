@@ -352,10 +352,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                        &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F               &kp O         &kp U            &kp J             &kp EQUAL
+&kp TAB                        &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F               &kp O         &kp U            &kp J             &ctrl_del
 &sk_mod LEFT_SHIFT LEFT_SHIFT  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
 &sym_ctrl LCTRL 0              &kp G            &kp W            &kp K         &kp C              &kp Q             &super_quote    &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
-                                                                 &nav_word 2   &ctrl_del          &adv_lt_ak 2 0    &adv_lt_sp 1 0  &kp ESCAPE          &num_word 1
+                                                                 &nav_word 2   &ctrl_del          &adv_lt_ak 2 0    &adv_lt_sp 1 0  &ctrl_del           &num_word 1
             >;
         };
 
@@ -369,10 +369,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans          &kp HASH            &kp LESS_THAN            &kp ASTERISK      &kp PLUS                     &kp CARET        &kp NUMBER_6   &kp N7                     &kp N8         &kp N9                   &kp N0             &trans
-&trans          &hml LEFT_GUI PIPE  &hml LEFT_ALT AMPERSAND  &hml LCTRL EQUAL  &hml LEFT_SHIFT EXCLAMATION  &para_l          &para_r        &hmr RIGHT_SHIFT NUMBER_4  &hmr RCTRL N5  &hmr RIGHT_ALT NUMBER_6  &hmr RIGHT_GUI N0  &trans
-&layer_tap 4 4  &kp DOLLAR          &kp GREATER_THAN         &kp SLASH         &kp MINUS                    &kp BACKSLASH    &kp LG(LS(E))  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3             &mod_per           &trans
-                                                             &trans            &trans                       &trans           &trans         &trans                     &trans
+&trans          &kp HASH            &kp LESS_THAN            &kp ASTERISK      &kp PLUS                     &kp CARET         &kp NUMBER_6   &kp N7                     &kp N8         &kp N9                   &kp N0             &trans
+&trans          &hml LEFT_GUI PIPE  &hml LEFT_ALT AMPERSAND  &hml LCTRL EQUAL  &hml LEFT_SHIFT EXCLAMATION  &para_tap         &para_r        &hmr RIGHT_SHIFT NUMBER_4  &hmr RCTRL N5  &hmr RIGHT_ALT NUMBER_6  &hmr RIGHT_GUI N0  &trans
+&layer_tap 4 4  &kp DOLLAR          &kp GREATER_THAN         &kp SLASH         &kp MINUS                    &kp BACKSLASH     &kp LG(LS(E))  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3             &mod_per           &trans
+                                                             &trans            &trans                       &adv_lt_sp 2 0    &trans         &trans                     &trans
             >;
         };
 
