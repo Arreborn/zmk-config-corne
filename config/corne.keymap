@@ -295,6 +295,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        c_esc: c_esc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_ESC";
+            bindings = <&m_bs>, <&kp ESCAPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     macros {
@@ -326,7 +335,7 @@
 
         c_word {
             bindings = <&caps_word>;
-            key-positions = <24 12>;
+            key-positions = <12 23>;
         };
     };
 
