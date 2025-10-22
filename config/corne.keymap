@@ -192,13 +192,13 @@
 
             akt_arr {
                 trigger-keys = <EQUAL>;
-                max-prior-idle-ms = 300;
+                max-prior-idle-ms = <300>;
                 bindings = <&kp LESS_THAN>;
             };
 
             akt_doll {
                 trigger-keys = <DOLLAR>;
-                max-prior-idle-ms = 300;
+                max-prior-idle-ms = <300>;
                 bindings = <&kp LEFT_BRACKET>;
             };
 
