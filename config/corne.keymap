@@ -207,7 +207,7 @@
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&m_bs>;
+            bindings = <&mo>, <&c_esc>;
 
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
