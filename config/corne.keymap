@@ -182,25 +182,7 @@
         ak_sp: ak_sp {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp ESC>;
-
-            akt_sc {
-                trigger-keys = <S>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp C>;
-            };
-
-            akt_ck {
-                trigger-keys = <C>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp K>;
-            };
-
-            akt_wr {
-                trigger-keys = <W>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp R>;
-            };
+            bindings = <&kp SPACE>;
 
             akt_sqt {
                 trigger-keys = <Y U E I N>;
@@ -208,10 +190,16 @@
                 bindings = <&kp SQT>;
             };
 
-            akt_re {
-                trigger-keys = <SQT>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp R>, <&kp E>;
+            akt_arr {
+                trigger-keys = <EQUAL>;
+                max-prior-idle-ms = 300;
+                bindings = <&kp LESS_THAN>;
+            };
+
+            akt_doll {
+                trigger-keys = <DOLLAR>;
+                max-prior-idle-ms = 300;
+                bindings = <&kp LEFT_BRACKET>;
             };
 
             akt_spc {
