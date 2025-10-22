@@ -207,7 +207,7 @@
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&c_esc>;
+            bindings = <&mo>, <&ak_sp>;
 
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
@@ -294,15 +294,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        c_esc: c_esc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_ESC";
-            bindings = <&m_bs>, <&kp ESCAPE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
