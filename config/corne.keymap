@@ -173,7 +173,7 @@
         ak_sp: ak_sp {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>;
+            bindings = <&kp ESCAPE>;
 
             akt_sqt {
                 trigger-keys = <Y U E I N>;
