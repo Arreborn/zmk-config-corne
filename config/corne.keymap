@@ -347,9 +347,9 @@
 
             bindings = <
 &kp TAB                        &kp B            &kp L            &kp P         &kp M              &kp X             &kp Z           &kp F               &kp O         &kp U            &kp J             &kp EQUAL
-&sk_mod LEFT_SHIFT LEFT_SHIFT  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ESCAPE
+&sk_mod LEFT_SHIFT LEFT_SHIFT  &hml LEFT_GUI D  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT S  &kp V             &kp Y           &hmr RIGHT_SHIFT N  &hmr RCTRL A  &hmr LEFT_ALT E  &hmr RIGHT_GUI I  &mt RIGHT_SHIFT ENTER
 &sym_ctrl LCTRL 0              &kp G            &kp W            &kp K         &kp C              &kp Q             &super_quote    &kp H               &mod_com      &mod_per         &tild_slash       &mt RIGHT_ALT MINUS
-                                                                 &nav_word 2   &ctrl_del          &adv_lt_ak 2 0    &adv_lt_sp 1 0  &kp ENTER           &num_word 1
+                                                                 &nav_word 2   &ctrl_del          &adv_lt_ak 2 0    &adv_lt_sp 1 0  &kp ESCAPE          &num_word 1
             >;
         };
 
