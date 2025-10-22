@@ -157,15 +157,6 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        bs_pipe: bs_pipe {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BS_PIPE";
-            bindings = <&kp PIPE>, <&kp BACKSLASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         adv_lt_sp: adv_lt_sp {
             compatible = "zmk,behavior-hold-tap";
             label = "ADV_LT_SP";
@@ -372,10 +363,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans          &kp NUMBER_1             &kp NUMBER_2             &kp NUMBER_3     &kp NUMBER_4           &kp N5            &kp NUMBER_6   &kp N7                     &kp N8         &kp N9                   &kp N0             &trans
-&trans          &hml LEFT_GUI AMPERSAND  &hml LEFT_ALT LESS_THAN  &hml LCTRL PLUS  &hml LEFT_SHIFT EQUAL  &kp MINUS         &para_tap      &hmr RIGHT_SHIFT NUMBER_4  &hmr RCTRL N5  &hmr RIGHT_ALT NUMBER_6  &hmr RIGHT_GUI N0  &trans
-&layer_tap 4 4  &bs_pipe                 &kp GREATER_THAN         &kp ASTERISK     &sym_com               &kp SLASH         &kp LG(LS(E))  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3             &mod_per           &trans
-                                                                  &trans           &trans                 &adv_lt_sp 2 0    &trans         &trans                     &trans
+&trans          &kp HASH            &kp LESS_THAN            &kp ASTERISK      &kp PLUS                     &kp CARET        &kp NUMBER_6   &kp N7                     &kp N8         &kp N9                   &kp N0             &trans
+&trans          &hml LEFT_GUI PIPE  &hml LEFT_ALT AMPERSAND  &hml LCTRL EQUAL  &hml LEFT_SHIFT EXCLAMATION  &para_l          &para_r        &hmr RIGHT_SHIFT NUMBER_4  &hmr RCTRL N5  &hmr RIGHT_ALT NUMBER_6  &hmr RIGHT_GUI N0  &trans
+&layer_tap 4 4  &kp DOLLAR          &kp GREATER_THAN         &kp SLASH         &kp MINUS                    &kp BACKSLASH    &kp LG(LS(E))  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3             &mod_per           &trans
+                                                             &trans            &trans                       &trans           &trans         &trans                     &trans
             >;
         };
 
