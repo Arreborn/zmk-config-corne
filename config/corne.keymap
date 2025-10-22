@@ -207,7 +207,7 @@
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&ak_sp>;
+            bindings = <&mo>, <&m_bs>;
 
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
@@ -287,16 +287,13 @@
             flavor = "tap-preferred";
         };
 
-        s_ak: s_ak {
-            compatible = "zmk,behavior-hold-tap";
-            label = "S_AK";
-            bindings = <&kp>, <&ak_sp>;
+        m_bs: m_bs {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_BS";
+            bindings = <&ak_sp>, <&ctrl_del>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <80>;
-            flavor = "tap-preferred";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
